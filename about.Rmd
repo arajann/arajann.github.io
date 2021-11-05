@@ -10,13 +10,12 @@ output:
 # Resume/Curriculum Vitae
 
 
-EDUCATION	
+## EDUCATION	
 Columbia University Mailman School of Public Health                                                September 2020-present
 Candidate for Masters of Public Health (Class of 2022)                                                   
      Concentration: Biostatistics and Data Science 
      Certificate: Comparative Effectiveness and Outcomes Research
-Relevant Coursework: Statistical Computing with SAS, Analysis of Categorical Data, Relational Databases and SQL programming, Regression Analysis
-     
+Relevant Coursework: Statistical Computing with SAS, Analysis of Categorical Data, Relational Databases and SQL programming, Regression Analysis, Data Science 1, Probability
 University of Florida		                                   May 2020
 Bachelor of Public Health		
 
