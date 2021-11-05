@@ -1,0 +1,24 @@
+---
+title: "Anand Rajan's Personal Website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# Information
+
+Welcome to my personal homepage! I am an avid fan of many things, one of which is coding and doing analysis in R. Within this webpage you will be able to navigate to my CV, ongoing personal projects, and sample plots I have made using existing data sets.
+
+
+
+## Useful links
+
+
+[Github Account](https://github.com/arajann)
+
+
+## Link to page within site
+
+[About me](about.Rmd)
