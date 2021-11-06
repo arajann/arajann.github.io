@@ -5,7 +5,7 @@ navbar:
   right:
     - text: "About"
       href: about.html
-    - text: "Plots"
+    - text: "Dashboard"
       href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<ar4173@cumc.columbia.edu>
@@ -13,4 +13,4 @@ navbar:
       href: http://github.com/arajann/
 output:
   html_document:
-    theme: cerulean
+    theme: cosmo

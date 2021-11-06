@@ -29,7 +29,7 @@ inspec_df =
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-###  Number of Critical Violations over Time
+###  Trends of Critical Violations by Year from 2013-2017 
 
 ```{r}
 inspec_df %>% 
@@ -49,6 +49,7 @@ inspec_df %>%
   count(critical_flag) %>% 
   plot_ly(x=~month, y=~n, color = ~year, type="scatter") %>% 
   layout(
+    title = "Number of Critical Violations over Time",
     xaxis= list(title= "Month"),
     yaxis= list(title="Number of Critical Violations")
   )
@@ -57,7 +58,7 @@ inspec_df %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Comparing Total Scores of Critical vs Not Critical
+### Comparing Total Scores of Inspections with Critical vs Not Critical level violations
 
 ```{r}
 inspec_df %>%
@@ -65,6 +66,7 @@ inspec_df %>%
     critical_flag %in% c("Critical","Not Critical")) %>% 
   plot_ly(y= ~score, color = ~critical_flag, type= "box", colors="viridis") %>% 
     layout(
+      title = "Critical vs Not Critical Level Violations",
     xaxis= list(title= "Level of Violation"),
     yaxis= list(title="Total score of Inspection")
   )
@@ -78,6 +80,7 @@ inspec_df %>%
   mutate(violation_code = fct_reorder(violation_code,n)) %>% 
   plot_ly(x= ~violation_code, y=~n,color= ~violation_code, type= "bar", colors="viridis") %>% 
     layout(
+    title = "Frequency of Violation Code",
     xaxis= list(title= "Violation Code"),
     yaxis= list(title="Frequency of Violations")
   )
