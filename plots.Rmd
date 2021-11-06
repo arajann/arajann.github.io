@@ -1,0 +1,50 @@
+---
+title: "Plots"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(skimr)
+library(plotly)
+```
+
+
+```{r}
+data ("rest_inspec")
+
+inspec_df =
+  rest_inspec %>% 
+  filter(
+    boro == "MANHATTAN",
+  ) %>% 
+  distinct(dba,inspection_date, .keep_all= TRUE) %>% 
+  drop_na(score)
+
+```
+
+## Comparing Total Scores of Critical vs Not Critical
+
+```{r}
+inspec_df %>%
+  filter(
+    critical_flag %in% c("Critical","Not Critical")) %>% 
+  plot_ly(y= ~score, color = ~critical_flag, type= "box", colors="viridis")
+```
+
+## Frequency of Each Violation Code
+
+
+```{r}
+inspec_df %>% 
+  count(violation_code) %>% 
+  mutate(violation_code = fct_reorder(violation_code,n)) %>% 
+  plot_ly(x= ~violation_code, y=~n,color= ~violation_code, type= "bar", colors="viridis")
+```
+
