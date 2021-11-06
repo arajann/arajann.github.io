@@ -51,7 +51,7 @@ Statistical Computing with SAS, Analysis of Categorical Data, Relational Databas
 
 ### SKILLS
 
-Software: Microsoft Excel(proficient), SAS(intermediate), mySQL(intermediate)
+**Software:** Microsoft Excel(proficient), SAS(intermediate), mySQL(intermediate)
 
-Methods: Linear and Multilinear Regression, ANOVA analysis, Logistic Regression and Model Building, Survival Analysis
+**Methods:** Linear and Multilinear Regression, ANOVA analysis, Logistic Regression and Model Building, Survival Analysis
 

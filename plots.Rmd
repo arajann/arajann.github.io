@@ -13,6 +13,7 @@ library(tidyverse)
 library(p8105.datasets)
 library(skimr)
 library(plotly)
+library(dplyr)
 ```
 
 Column {data-width=650}
@@ -28,8 +29,6 @@ inspec_df =
   ) %>% 
   distinct(dba,inspection_date, .keep_all= TRUE) %>% 
   drop_na(score)
-
-
 
 ```
 
@@ -53,7 +52,7 @@ inspec_df %>%
     critical_flag == "Critical") %>% 
   group_by(month,year) %>% 
   count(critical_flag) %>% 
-  plot_ly(x=~month, y=~n, color = ~year, type="scatter") 
+  plot_ly(x=~month, y=~n, group=~year, color = ~year, type="scatter", mode="lines+markers") 
 ```
 
 Column {data-width=350}
