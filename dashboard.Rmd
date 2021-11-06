@@ -8,15 +8,12 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-library(flexdashboard)
 library(tidyverse)
 library(p8105.datasets)
-library(skimr)
 library(plotly)
-```
 
-Column {data-width=650}
------------------------------------------------------------------------
+library(flexdashboard)
+```
 
 ```{r warning = FALSE, include = FALSE}
 data ("rest_inspec")
@@ -28,16 +25,13 @@ inspec_df =
   ) %>% 
   distinct(dba,inspection_date, .keep_all= TRUE) %>% 
   drop_na(score)
-
-
-
 ```
+Column {data-width=650}
+-----------------------------------------------------------------------
 
+###  Number of Critical Violations over Time
 
-### Number of Critical Violations over Time
-
-
-```{r warning = FALSE}
+```{r}
 inspec_df %>% 
   separate(col = inspection_date, into = c("year", "month", "day"), sep ="-", remove = TRUE, convert = TRUE, extra = 'warn',fill='warn') %>% 
     mutate(
@@ -53,7 +47,11 @@ inspec_df %>%
     critical_flag == "Critical") %>% 
   group_by(month,year) %>% 
   count(critical_flag) %>% 
-  plot_ly(x=~month, y=~n, color = ~year, type="scatter") 
+  plot_ly(x=~month, y=~n, color = ~year, type="scatter") %>% 
+  layout(
+    xaxis= list(title= "Month"),
+    yaxis= list(title="Number of Critical Violations")
+  )
 ```
 
 Column {data-width=350}
@@ -61,23 +59,27 @@ Column {data-width=350}
 
 ### Comparing Total Scores of Critical vs Not Critical
 
-```{r warning= FALSE}
+```{r}
 inspec_df %>%
   filter(
     critical_flag %in% c("Critical","Not Critical")) %>% 
-  plot_ly(y= ~score, color = ~critical_flag, type= "box", colors="viridis") 
+  plot_ly(y= ~score, color = ~critical_flag, type= "box", colors="viridis") %>% 
+    layout(
+    xaxis= list(title= "Level of Violation"),
+    yaxis= list(title="Total score of Inspection")
+  )
 ```
-
-Column {data-width=350}
------------------------------------------------------------------------
 
 ### Frequency of Each Violation Code
 
-
-```{r warning=FALSE}
+```{r}
 inspec_df %>% 
   count(violation_code) %>% 
   mutate(violation_code = fct_reorder(violation_code,n)) %>% 
-  plot_ly(x= ~violation_code, y=~n,color= ~violation_code, type= "bar", colors="viridis")
+  plot_ly(x= ~violation_code, y=~n,color= ~violation_code, type= "bar", colors="viridis") %>% 
+    layout(
+    xaxis= list(title= "Violation Code"),
+    yaxis= list(title="Frequency of Violations")
+  )
 ```
 
