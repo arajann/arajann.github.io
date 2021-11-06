@@ -4,7 +4,6 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
 # Information
@@ -19,6 +18,8 @@ Welcome to my personal homepage! I am an avid fan of many things, one of which i
 [Github Account](https://github.com/arajann)
 
 
-## Link to page within site
+## Personal Information
 
 [About me](about.html)
+
+Email: ar4173@cumc.columbia.edu

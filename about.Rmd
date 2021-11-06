@@ -4,44 +4,54 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
-# Resume/Curriculum Vitae
+## Resume/Curriculum Vitae
 
 
-## EDUCATION	
-Columbia University Mailman School of Public Health                                                September 2020-present
-Candidate for Masters of Public Health (Class of 2022)                                                   
-     Concentration: Biostatistics and Data Science 
-     Certificate: Comparative Effectiveness and Outcomes Research
-Relevant Coursework: Statistical Computing with SAS, Analysis of Categorical Data, Relational Databases and SQL programming, Regression Analysis, Data Science 1, Probability
-University of Florida		                                   May 2020
-Bachelor of Public Health		
+### EDUCATION	
+**Columbia University Mailman School of Public Health**                                                
+Candidate for Masters of Public Health (Class of 2022) 
 
-RESEARCH			
-Research Assistant	                                                                                                       January 2020-May 2020
-Division for Nephrology, Hypertension at UF Health                            
-	Reviewed and analyzed health data as a research assistant for Dr. Rajesh Mohandas, Department of Nephrology
-	Investigated the long-term health complications of Catheter Related Blood Stream Infections and evaluated whether catheter salvage or exchange is associated with such complications
+- Concentration: Biostatistics and Data Science 
+- Certificate: Comparative Effectiveness and Outcomes Research
+
+**University of Florida**		                                 
+- Bachelor of Public Health		
+
+**Relevant Coursework:** 
+Statistical Computing with SAS, Analysis of Categorical Data, Relational Databases and SQL programming, Regression Analysis, Data Science 1, Probability
+
+### RESEARCH			
+
+**Research Assistant**                                      
+**Division for Nephrology, Hypertension at UF Health** 
+
+- Reviewed and analyzed health data as a research assistant for Dr. Rajesh Mohandas, Department of Nephrology
+- Investigated the long-term health complications of Catheter Related Blood Stream Infections and evaluated whether catheter salvage or exchange is associated with such complications
 -	Reviewed medical records of patients diagnosed with CRBSI and interpreted whether the catheter practice used resulted in health complications
 -	Conducted ANOVA analysis and univariate analysis of health data through Excel
 
-Research Assistant/Data Analyst                                                                                        January 2018-July 2019  
-UF Health Center for Movement Disorders                                          
-	Computed and analyzed health data as a research assistant for Dr. Aparna Shukla, Department of Neurology 
-	Investigated the characteristics of the tremor and dystonia in patients with progressive supranuclear palsy (PSP) and other atypical forms of Parkinson’s disease
+**Research Assistant/Data Analyst**                                                                                        
+**UF Health Center for Movement Disorders** 
+
+- Computed and analyzed health data as a research assistant for Dr. Aparna Shukla, Department of Neurology 
+- Investigated the characteristics of the tremor and dystonia in patients with progressive supranuclear palsy (PSP) and other atypical forms of Parkinson’s disease
 -	Examined medical records of patients diagnosed with PSP and identified presence of tremor or dystonia that was then classified based on body distribution
 -	Calculated a numerical analysis of patients that were identified with Tremor/Dystonia through excel
 -	Presented research at the 71st American Academy of Neurology Annual Meeting
 
-PROFESSIONAL EXPERIENCE
-Monitor Support Tech		                 May 2017-June 2020
-Internal Medicine Intensive Care Unit in UF Health/Shands	
-	Read and Monitored Electrocardiograms to identify instances of heart arrythmia or dysfunction
-	Interacted with patients and attended to patient needs outside of direct medical care
+### PROFESSIONAL EXPERIENCE
 
-SKILLS
+**Monitor Support Tech**		              
+**Internal Medicine Intensive Care Unit in UF Health/Shands**	
+
+- Read and Monitored Electrocardiograms to identify instances of heart arrythmia or dysfunction
+- Interacted with patients and attended to patient needs outside of direct medical care
+
+### SKILLS
+
 Software: Microsoft Excel(proficient), SAS(intermediate), mySQL(intermediate)
+
 Methods: Linear and Multilinear Regression, ANOVA analysis, Logistic Regression and Model Building, Survival Analysis
 
