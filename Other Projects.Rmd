@@ -1,0 +1,32 @@
+---
+title: "Other Projects"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    css: styles.css
+---
+
+## Phase III RCT Proposal
+
+Download Proposal: [A Phase III Superiority Trial Proposal of CRISPR-Cas9 Gene Editing Therapy vs Hydroxyurea for Sickle Cell Disease Patients](CRISPR-Cas9 Phase III RCT Proposal.pdf)
+
+Overview: Created a Phase III Randomized Control Trial Proposal where I designed a multicenter trial that answered the following clinical question.Among patients at least the age of 18 with sickle cell disease, is CRISPR-CAS-9 Therapy (single dose of CTX001 Infusion) superior to Hydroxyurea (15 milligram per kilogram of body weight) in reducing the frequency of Vaso-occlusive crises over the 2 years of individual follow-up? 
+
+
+## Propensity Score Analysis 
+
+Download Report: [Pyelonephritis Treatment: An Analysis of Outcomes between teaching & non-teaching hospitals](Applied Methods Final Project.pdf)
+
+Overview: A study that utilizes a propensity score analysis using propensity score matching methods (Greedy 5:1) to investigate the impact of receiving treatment for pyelonephritis at a teaching hospital on length of stay and mortality. 
+
+Software: SAS
+
+
+## Effect of Concentrations of Various Major Air Pollutants on Cancer Prevalence at the State Level over Time
+
+Link: [The Link Air Pollutant Concentration to Lung Cancer](https://arajann.github.io/finalproject.github.io/index.html)
+
+Software: RStudio
+
+

@@ -9,10 +9,8 @@ navbar:
       href: childhood-trauma-study.html
     - text: "ML Methods to Predict Stroke"
       href: ML-Methods-to-Predict-Stroke.html
-    - text: "Randomized Control Trial Proposal"
-      href: RCT-Proposal.html
-    - text: "Dashboard"
-      href: dashboard.html
+    - text: "Other Projects"
+      href: Other-Projects.html
     - icon: fa-envelope fa-lg
       href: mailto:<anandrajan44@gmail.com>
     - icon: fa-github fa-lg

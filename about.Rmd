@@ -17,7 +17,9 @@ Masters of Public Health (Class of 2022)
 - Certificate: Comparative Effectiveness and Outcomes Research
 
 **University of Florida**		                                 
-- Bachelor of Public Health(Class of 2020)	
+Bachelor of Public Health(Class of 2020)
+
+- Graduated Cum Laude (with honors)
 
 **Relevant Coursework:** 
 Statistical Computing with SAS, Analysis of Categorical Data, Relational Databases and SQL programming, Regression Analysis, Data Science I&II, Probability, Decision Analysis, Analysis of Large Datasets, Statistical Inference, Intro to Randomized Controlled Trials, Applied Methods-Outcomes Research, Genetics, Biochemistry
@@ -25,7 +27,8 @@ Statistical Computing with SAS, Analysis of Categorical Data, Relational Databas
 ### RESEARCH			
 
 **Principal Biostatistician**                                      
-**Columbia Irving Medical Center – Vagelos College of Physicians** 
+**Columbia Irving Medical Center – Vagelos College of Physicians**
+
 - Designed and managed data analysis as the principal biostatistician for a retrospective cohort study for Dr. Michael Mangold, Department of Psychiatry 
 - Investigated the effect of drug use on the link between childhood trauma and later life cognition
       - Pulled and cleaned cognition data from the MIDUS national study database and conducted exploratory analysis to understand the association between childhood trauma and adult cognition
