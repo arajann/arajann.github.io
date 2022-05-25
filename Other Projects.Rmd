@@ -27,6 +27,8 @@ Software: SAS
 
 Link: [The Link Air Pollutant Concentration to Lung Cancer](https://arajann.github.io/finalproject.github.io/index.html)
 
+Overview: A project that investigates the associations between major pollutant concentration levels and lung cancer at the population level with respect to time. Cancer statistics were retrieved from the American Cancer Society, and Air Pollution data in the US from 2000 to 2016 was gathered by the EPA. 
+
 Software: RStudio
 
 
