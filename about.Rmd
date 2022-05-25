@@ -11,18 +11,26 @@ output:
 
 ### EDUCATION	
 **Columbia University Mailman School of Public Health**                                                
-Candidate for Masters of Public Health (Class of 2022) 
+Masters of Public Health (Class of 2022) 
 
 - Concentration: Biostatistics and Data Science 
 - Certificate: Comparative Effectiveness and Outcomes Research
 
 **University of Florida**		                                 
-- Bachelor of Public Health		
+- Bachelor of Public Health(Class of 2020)	
 
 **Relevant Coursework:** 
-Statistical Computing with SAS, Analysis of Categorical Data, Relational Databases and SQL programming, Regression Analysis, Data Science 1, Probability
+Statistical Computing with SAS, Analysis of Categorical Data, Relational Databases and SQL programming, Regression Analysis, Data Science I&II, Probability, Decision Analysis, Analysis of Large Datasets, Statistical Inference, Intro to Randomized Controlled Trials, Applied Methods-Outcomes Research, Genetics, Biochemistry
 
 ### RESEARCH			
+
+**Principal Biostatistician**                                      
+**Columbia Irving Medical Center – Vagelos College of Physicians** 
+- Designed and managed data analysis as the principal biostatistician for a retrospective cohort study for Dr. Michael Mangold, Department of Psychiatry 
+- Investigated the effect of drug use on the link between childhood trauma and later life cognition
+      - Pulled and cleaned cognition data from the MIDUS national study database and conducted exploratory analysis to understand the association between childhood trauma and adult cognition
+      - Conducted moderation analysis via regression analysis using linear/generalized mixed effect models in R
+      - Presented research at annual Columbia Biostatistics Department Symposium
 
 **Research Assistant**                                      
 **Division for Nephrology, Hypertension at UF Health** 
@@ -47,11 +55,11 @@ Statistical Computing with SAS, Analysis of Categorical Data, Relational Databas
 **Internal Medicine Intensive Care Unit in UF Health/Shands**	
 
 - Read and Monitored Electrocardiograms to identify instances of heart arrythmia or dysfunction
-- Interacted with patients and attended to patient needs outside of direct medical care
+- Developed familiarity with accessing and inputting information in electronic health records in Epic
 
 ### SKILLS
 
-**Software:** Microsoft Excel(proficient), SAS(intermediate), mySQL(intermediate)
+**Software:** Microsoft Excel, SAS, mySQL, R, GitHub, STATA, MS Office(all advanced usage)
 
-**Methods:** Linear and Multilinear Regression, ANOVA analysis, Logistic Regression and Model Building, Survival Analysis
+**Methods:** Linear and Multivariable Regression, ANOVA analysis, Logistic Regression and Model Building, Data Visualization and Tidying, Survival Analysis, Statistical Machine Learning, Propensity Score Analysis, Supervised and Unsupervised learning techniques
 

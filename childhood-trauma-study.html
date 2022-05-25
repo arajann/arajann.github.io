@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>The Effect of Substance Misuse on the Link Between Childhood Trauma and Mid- to Late-Life Cognition</title>
+
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="childhood-trauma-study.html">Childhood Trauma Study</a>
+</li>
+<li>
+  <a href="ML-Methods-to-Predict-Stroke.html">ML Methods to Predict Stroke</a>
+</li>
+<li>
+  <a href="RCT-Proposal.html">Randomized Control Trial Proposal</a>
+</li>
+<li>
+  <a href="dashboard.html">Dashboard</a>
+</li>
+<li>
+  <a href="mailto:&lt;anandrajan44@gmail.com&gt;">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/arajann/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">The Effect of Substance Misuse on the Link Between Childhood Trauma and Mid- to Late-Life Cognition</h1>
+
+</div>
+
+
+<div id="student-role-and-overview" class="section level2">
+<h2>Student Role and Overview</h2>
+<p>Dr. Michael Mangold is a clinician whose research interests focus on the impact of childhood trauma on various health outcomes. His current research investigates the effect of trauma in childhood on later life cognition and variables that attenuate this relationship. In prior research, he was able to show an association between substance misuse and early childhood trauma when investigating the distal outcome of parasympathetic activity. In his current project, he hypothesizes that substance abuse has an influence on the link between childhood trauma and mid- to late-life cognition. I was recruited for this project to be the primary biostatistician, in which I designed an analysis plan, conducted analyses in R, and drew statistical conclusions. After completing analysis, I worked with Dr. Mangold to analyze the statistical outcomes and draw clinically relevant conclusions from the data.</p>
+</div>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>There is a significant and growing body of literature that investigates the association between childhood trauma and adulthood cognition.Prior research indicates that those with high exposures to childhood trauma had poorer cognitive performance as adults compared to those who had low exposure to trauma.1 The neurobiological mechanisms hypothesized to explain the possible association to poorer cognitive performance are decreased neuroplasticity, epigenetic modification of stress-related pathways, and the activation of the HPA axis.1 Disorders tied with exposure to trauma in childhood include but are not limited to major depressive disorder, bipolar disorder, anxiety, post-traumatic stress disorder, and among others.2-3 Many of these mental health disorders are linked to profound cognitive impairment.3 However, literature review also revealed poorer cognitive performance not only among adults who developed mental health disorders, but healthy adults who experienced trauma in childhood as well.3 The association was further evaluated by types of cognition – memory and executive functioning – and there continued to be significant results indicating cognitive decline.3 Despite the currently available literature on the link between childhood trauma and adulthood cognition, results are inconclusive as to whether there is strong statistical association.1 More longitudinal analyses must be done to establish this association. Additionally, a significant gap in current literature is evaluating factors that affect the magnitude of the possible association between trauma and later life cognition – specifically substance abuse. Substance abuse is a significant comorbidity to childhood trauma with the magnitudes of association to trauma differing based on type of substance.4 We also see profound cognitive impairment among those who frequently use illicit substances. Thus, the purpose of the study is to investigate whether substance use has a moderating effect on the association between childhood trauma and later life cognition. We will conduct a retrospective cohort study to investigate this clinical question.</p>
+</div>
+<div id="methods" class="section level2">
+<h2>Methods</h2>
+<div id="study-population-and-data-collection" class="section level3">
+<h3>Study Population and Data Collection</h3>
+<p>The study population is adults from the Midlife in United States (MIDUS) study. MIDUS is an ongoing national, longitudinal study that looks at how different health factors (social, behavioral, psychological, biological, and neurological) come together to impact the health of age from early adulthood into midlife into old-age among continental US residents from ages 25 to 74.5 Data collection has occurred in three waves thus far– MIDUS I(1995), MIDUS II (2004)and MIDUS III(2013). The sample population for this study is from MIDUS II, respondents aged 35 to 86. Midus II includes a nine year follow up from the MIDUS I cohort, conducted from 2004 to 2006. Moreover, it includes a sample from Milwaukee, Wisconsin of primarily African American adults as part of the Milwaukee Project. Data collection for this cohort included survey assessments via phone interviews and questionnaires, along with additional questions in specific areas such as cognition.5 Data from the MIDUS study was retrieved from an online database published by the National Archive of Computerized Data on Aging.5 Inclusion criteria for this study was participants who had complete data on cognition and childhood trauma scores. There were a total of 1101 participants included in the study.</p>
+</div>
+<div id="measures" class="section level3">
+<h3>Measures</h3>
+<div id="cognition" class="section level4">
+<h4>Cognition</h4>
+<p>The primary outcome of interest is cognitive performance. Cognitive performance was evaluated at three levels in this study – composite cognition, episodic memory, and executive functioning z-scores. Each of the three levels of cognition were measured via BTACT, otherwise known as the Brief Test of Adult Cognition by Telephone.6 As stated in the name of the tool, seven tests are administered to individuals by live interviewers via telephone. 6 These tests can be used to measure two intercorrelated factors: episodic memory and executive functioning.6 Composite cognition is measured via the performance on all the tests. In the MIDUS dataset, these performance scores were reported via z scores. The z-scores are computed based on the mean and standard deviation of the MIDUS II sample for each of the 5 major tests. The z-scores were then averaged to create z-scores for each of the levels of cognition. Initial data exploration revealed a normal distribution for composite cognition z scores (Shapiro Wilk-statistic: 0.998, p-value=0.309) and non-normal distributions for episodic memory (Shapiro Wilk-statistic: 0.989, p-value&lt;0.001) and executive functioning z scores (Shapiro Wilk-statistic: 0.996, p-value&lt;0.0001). The results for the Shapiro-Wilks tests were confirmed by plotting density plots of the distribution of z scores as seen in figure 1.</p>
+<pre><code>## Don&#39;t know how to automatically pick scale for object of type haven_labelled/vctrs_vctr/double. Defaulting to continuous.</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre><code>## Don&#39;t know how to automatically pick scale for object of type haven_labelled/vctrs_vctr/double. Defaulting to continuous.</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre><code>## Don&#39;t know how to automatically pick scale for object of type haven_labelled/vctrs_vctr/double. Defaulting to continuous.</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="childhood-trauma-study_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="childhood-trauma" class="section level4">
+<h4>Childhood Trauma</h4>
+<p>The primary predictor is childhood trauma, measured using the Childhood Trauma questionnaire (CTQ). The questionnaire is a retrospective recall-based measure used to determine childhood trauma experiences.7 The questionnaire has 6 subscales of physical abuse, sexual abuse, emotional abuse, emotional neglect, physical neglect, and minimization/denial.7 Responses are measured on a 5-point Likert scale from “never true” to “very often true”.7 Total scores for each section range from 5 to 25 points, except for minimization and denial which includes three questions ranging from 3 to 15 points. In this study, we will further aggregate the subscales into two groups: threat and deprivation. Threat is the sum of physical, sexual and emotional abuse scores, while deprivation is sum of physical, emotional neglect, and minimization/denial scores.</p>
+</div>
+<div id="substance-use" class="section level4">
+<h4>Substance Use</h4>
+<p>Substance use was measured as a binary, categorical variable. Study participants at the time of the interview were asked whether they self-administered substances over the past 12 months. The group of substances include tranquilizers, stimulants, painkillers, depressants, marijuana, cocaine, hallucinogens, inhalants and heroin. Table 1 shows us the number of participants who answered yes or no as to having used each of the substances. From table 1, we see that the number of participants who indicated use of substances is quite low. Substance miduse was aggregated and computed via the data created into a binary categorical variable that indicates whether an individual had used any substance over the past 12 months. Calculations showed that in total 104 participants (9.4% of sample) indicated use of a substance.</p>
+</div>
+<div id="confounding-and-adjusted-covariates" class="section level4">
+<h4>Confounding and Adjusted Covariates</h4>
+<p>The association between childhood trauma and adult cognition is confounded by a multitude of factors. In this study the following covariates were adjusted for: race, sex, age and highest level of education completed. Race and sex were considered confounders based on literature review and confirmation via statistical criterion. The high association of age and education to cognition warranted adjustment.</p>
+</div>
+</div>
+<div id="analysis-plan" class="section level3">
+<h3>Analysis Plan</h3>
+<p>To analyze whether substance use has a moderating effect on the association between childhood trauma and later life cognition, we used regression analysis for our primary analysis. The purpose of the regression analysis is to test for significance of interaction effects between substance use and childhood trauma questionnaire scores. We will run analyses for both total substance use and substance use broken down by group. For the purposes of interpretability and model building, we will exclude marijuana and heroin as parameters for the model given the small cell size – as seen in table 1. We will utilize mixed effects models with family ID as our random effect. The assumption of independence is violated for this sample as investigators used cluster sampling, therefore observations are likely correlated if they come from the same family. Therefore, mixed effect models were deemed appropriate. For composite cognition, we will use linear mixed effects models as the distribution of z scores is normal (see figure 1). Whereas, generalized linear mixed effects models will be used for model analysis for episodic memory and executive functioning z score since the distributions for both are non-normal. To begin, an unadjusted analysis was conducted to investigate the unadjusted association between childhood trauma scores (deprivation and threat) and each respective type of cognition. Then a model adjusted for the covariates of substance use (total vs by group), race, sex, age, and education will be fitted. To evaluate the significance of parameters in the model, we will first look at parameter estimates to see if they are greater than ± 0.3. This value was chosen as previous studies deemed the difference of a 0.3 cognition z-score to be clinically significant and relevant.6 Then we will look at the confidence interval and p-values from t-tests to evaluate whether individual slope parameters are statistically significant. If the null value of 0 is included in the confidence interval or the p-value is above the 5% significance level, we will conclude the parameter is not statistically significant. The same process for evaluating significance of parameters will be applied to the model with interactions between childhood trauma scores and substance use. In this model, we are mainly looking to see if there were changes in parameter estimates for CTQ scores and if the interaction terms are significant. The final step to evaluate significance of interaction effects is to compare the model with interaction effects to the model adjusted for covariates through a Likelihood Ratio Test and comparison of AIC and BIC. Assumptions of constant variance were checked through fitted residual plots for all models built.</p>
+</div>
+</div>
+<div id="results" class="section level2">
+<h2>Results</h2>
+<div id="composite-cognition" class="section level3">
+<h3>Composite Cognition</h3>
+<p>A linear mixed effects model was fitted with fixed effects of threat (β=0.004, 95% CI:(-0.005,0.014)) and deprivation (β= -0.013, 95% CI: (-0.026, 0.005)) and random effects of family. From testing the significance of the parameters, we would conclude that both predictors are insignificant at the 5% significance level for this model. The 95% confidence intervals of the parameter confirm the results of the statistical tests of significance for the parameters since 0 is included in the interval. Despite insignificant fixed effects, we would conclude that random effects due to family are significant as the differences between families explains 53.8% of the variance not explained by the fixed effects.</p>
+<p>The models adjusted for covariates did not yield statistically significant results regarding significance of parameter estimates for individual substance groups nor total substance use. However, the models do show us the importance of doing subgroup analysis when looking at substance use. Furthermore, the confounders and covariates adjusted for were in the most part significant as illustrated in the effects plot and parameter estimates table in figure 2 above. We drew similar statistical conclusions from the interactions model as well. None of the interaction terms were significant as confidence intervals included 0, p-values greater than 0.05, and the parameter estimates were within ±0.3. We then compared adjusted model to the model with interaction terms of substance use with CTQ scores via the Likelihood Ratio test. From the test we found that the interactions model was not significantly different (χ^2=0.1783, p-value = 0.9147). Moreover, the interactions model was higher in both AIC and BIC. Thus, we conclude the interaction effects of drug use (by subgroup) and childhood trauma is not significant. Regression analysis for total substance use yielded similar results. When comparing the model fit of the adjusted model to the adjusted model with interaction terms, there were not significant differences in marginal or conditional r^2.</p>
+</div>
+<div id="episodic-memory" class="section level3">
+<h3>Episodic Memory</h3>
+<p>Unadjusted analysis showed that threat (β=0.006, 95% CI:(-0.002,0.015)) and deprivation (β= -0.007, 95% CI: (-0.019, 0.006)) were not significant predictors for episodic memory at the 5% significance level. Moreover, random effects due to family were not as significant in this model as the differences due to family only explained 27.8% of variation not explained by the fixed effects. After adjusting for covariates, model fit slightly improved with increases in marginal and conditional r2, but the slope parameters for threat and deprivation continued to have low, insignificant values. Both evaluation of interaction parameters and model comparison confirmed interaction effects between aggregated substance and childhood trauma were not significant. Similar analyses was conducted, but with substance use broken down into substance group categories – we found different results! Though the individual interaction parameters were not significant, the interactions model was found to be significantly better than the adjusted covariates model without interactions at the 5% significance level(X^2=125.27,p-value&lt;0.0001). Table 2 shows the model comparison statistics. From the model comparisons we see that AIC, BIC, and deviance are lower for the interactions model. This indicates better model fit. Despite the conclusions drawn from the model comparisons, we cannot definitively conclude interaction effects are significant, but there is a possibility of interaction effects.</p>
+</div>
+<div id="executive-functioning" class="section level3">
+<h3>Executive Functioning</h3>
+<p>The unadjusted model showed that childhood deprivation (β= - 0.014, 95% CI:(-0.025,-0.0017), p-value=0.0248) is a significant predictor for executive functioning at the 5% significance level. We would interpret this slope parameter as for every one-point increase in deprivation, on average, executive functioning z score decreases by 0.014. Since 0 is not in the 95% confidence interval, this parameter is significant. Furthermore the marginal r^2 value associated with the fixed effects is significantly low, but the conditional r2 is much higher indicating the significance of random effects due to family (marginal R2=0.005, conditional R2=0.598). Model analysis looking at drug use subgroups yielded significant results. From the adjusted model, we see parameter estimates are significantly different from substance group to substance group. Furthermore, we see the parameter estimate for inhalants is significant (β=-0.48,95% CI(-0.89,-0.06),p-value=0.024). Like when evaluating composite cognition, the model suggests the importance of separating substance use by subgroup. After adjusting for covariates, model fit drastically increased (marginal R2=0.29, conditional R2=0.63). However, investigation into interaction effects between substance use by subgroup and childhood trauma yielded insignificant results. Interaction terms were not significant and there was no significant difference between the interaction models and their respective adjusted models. Both the likelihood ratio test and AIC/BIC model comparisons indicated there are likely no interaction effects between substance use and childhood trauma scores.</p>
+</div>
+</div>
+<div id="discussion" class="section level2">
+<h2>Discussion</h2>
+<p>The study does not support the hypothesis that substance use has a moderating effect on the association between childhood trauma and later life cognition. Using a diverse and large sample from the MIDUS study, we did not find that substance use greatly affected the association between childhood trauma and cognitive performance. Looking at composite cognition, we did not see significant interaction effects between childhood trauma scores and substance use, both total and subgroup. Through both evaluation of slope parameters for interaction terms and model comparison, we found that that interaction effects were not significant nor improved model fit. Similar conclusions were drawn when looking at executive functioning. Estimated marginal means analysis was also conducted by type of trauma (threat and deprivation) and confirmed that substance use was not a moderator of the possible association between childhood trauma and composite or executive functioning. However, when investigating episodic memory, there were indications of significance of the interaction effects of substance groups and childhood trauma. Evaluation of specific interaction terms showed non-significance, but the interaction model was significantly better than the adjusted covariates model. Given the analysis, we are unable to firmly conclude substance use is a moderator on the association between trauma and episodic memory, but there is evidence of potential interaction effects. In future analyses, we should further explore these interaction effects. Despite not finding significant results indicating a moderating effect of substance use, there are other conclusions that could be drawn from analysis. For one, the covariates and confounders adjusted for regression analysis were important. There were clear differences in levels of cognition and trauma across sex and race. Of note is the magnitude of difference in cognition of those who identified as Black compared to White consistently across models built. Based on these results, it would be important to look at the relationship of childhood trauma and cognition within the Milwaukee sample – primarily Black individuals. Moreover, from the models built, we saw the random effects of grouping by family were quite significant. In future regression analysis, we should include family as a random effect. Finally, regarding substance use, regression analysis illustrated the significance of looking at substance use by each category of substance as opposed to aggregation. Models built showed significantly different slope parameters based on substance groups, and specific trends of those who indicated as having used painkillers or depressants or inhalants having significantly lower z scores for different types of cognition. Moving forward with investigating the clinical question, evaluating the moderation effect of specific groups of substances is essential.</p>
+<div id="limitations-and-future-recommendations" class="section level3">
+<h3>Limitations and Future Recommendations:</h3>
+<p>There were many limitations to this study. The first, major limitations were with respect to the variable of substance use. The low levels of substance use in the sample, while this is in line with other national samples, the use of different substances was unequal (e.g., 6.2% used Marijuana per the 2002 National Survey on Drug Use and Health: National Findings in comparison to 0.09% in this study) (citation). With 9.6% of the sample having indicated any use of substance, and the number individuals within each group being lower, the interpretability of our results was greatly affected. From reviewing the analysis, there is support to have even removed more groups of substances than we initially did for regression analysis. Secondly, there are limitations regarding the information we can gather from the variable itself. The effect of substance use on cognitive impairment varies by frequency/degree of addiction to the substance in question. The interview question from the MIDUS study was whether one had used the substance in the past 12 months, thus we do not know the level as to which one used the substance if indicating yes. For future waves of data collection in the MIDUS study, we recommend interviewers ask frequency of substance use if indicating yes. The other limitations are in regard to unmeasured confounding that affects the relationship between trauma and cognition. One of the major unmeasured confounders is indication of mental health disorders. As stated in the background, mental illness greatly affects cognition. Thus, in future analyses, including presence or absence of different mental health disorders would important. Unmeasured confounding played a role as we were unable to establish statistically significant associations between childhood trauma scores and cognition z scores. The lack of significant associations also greatly affected our ability to conclude whether substance use was in fact a moderator. Other recommendations are centered around possible statistical methods that could be used in future analyses. For one, we should categorize cognition and childhood trauma into a categorical variable and create logistic regressions. Using this method, we could have greater interpretability on the odds that certain factors, such as high exposure to childhood trauma or substance use, would result in poor cognition. Furthermore, to understand the impact of certain factors we could utilize various machine learning methods such as Monte Carlo Markov Chains. Finally, a mediator analysis could be an informative, different approach.</p>
+</div>
+</div>
+<div id="references" class="section level2">
+<h2>References</h2>
+<ol style="list-style-type: decimal">
+<li>Petkus, A. J., Lenze, E. J., Butters, M. A., Twamley, E. W., &amp; Wetherell, J. L. (2017). Childhood trauma is associated with poorer cognitive performance in older adults. The Journal of clinical psychiatry, 78(1), 2579.</li>
+<li>Elsevier. (2018, September 12). Childhood trauma linked to impaired social cognition later in life for patients with major psychiatric disorders: Better understanding of the connection should lead to more effective interventions and treatments.</li>
+<li>Majer, M., Nater, U. M., Lin, J. M. S., Capuron, L., &amp; Reeves, W. C. (2010). Association of childhood trauma with cognitive function in healthy adults: a pilot study. BMC neurology, 10(1), 1-10.</li>
+<li>Khoury, L., Tang, Y. L., Bradley, B., Cubells, J. F., &amp; Ressler, K. J. (2010). Substance use, childhood traumatic experience, and posttraumatic stress disorder in an urban civilian population. Depression and anxiety, 27(12), 1077-1086.</li>
+<li>Midlife in the United States. (n.d.). Retrieved May 2, 2022, from <a href="https://midus.colectica.org/" class="uri">https://midus.colectica.org/</a></li>
+<li>Lachman, M. E., Agrigoroaei, S., Tun, P. A., &amp; Weaver, S. L. (2014). Monitoring cognitive functioning: Psychometric properties of the Brief Test of Adult Cognition by Telephone. Assessment, 21(4), 404-417.</li>
+<li>Liebschutz, J. M., Buchanan-Howland, K., Chen, C. A., Frank, D. A., Richardson, M. A., Heeren, T. C., … &amp; Rose-Jacobs, R. (2018). Childhood Trauma Questionnaire (CTQ) correlations with prospective violence assessment in a longitudinal cohort. Psychological assessment, 30(6), 841</li>
+<li>Mehta, D., Klengel, T., Conneely, K. N., Smith, A. K., Altmann, A., Pace, T. W., … &amp; Binder, E. B. (2013). Childhood maltreatment is associated with distinct genomic and epigenetic profiles in posttraumatic stress disorder. Proceedings of the national academy of sciences, 110(20), 8302-8307.</li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,435 @@
+---
+title: "Apply Machine Learning Methods to Predict Stroke"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+```{r, include=FALSE}
+library(tidyverse)
+library(caret)
+library(recipes)
+library(kernlab)
+library(ISLR)
+library(mlbench)
+library(ranger)
+library(gbm)
+library(pdp)
+library(pROC)
+library(here)
+library(AppliedPredictiveModeling)
+library(patchwork)
+library(glmnet)
+```
+
+# Introduction
+## Data/Motivation
+For our project our team chose to use the stroke prediction dataset from [kaggle](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset?datasetId=1120859&language=R). [Stroke](https://www.stroke.org/en/about-stroke#:~:text=Stroke%20is%20a%20disease%20that,or%20bursts%20(or%20ruptures)) is a disease that affects the arteries leading to and within the brain. It is the No. 5 cause of death and a leading cause of disability in the United States. Our motivation was to use this dataset to help identify key indicators that lead to strokes, since many are preventable. The questions we are trying to answer using this dataset are: 1) What are the key indicators or risk factors that lead to stroke occurrence? 2) Which classification model performs best in predicting these key indicators?
+
+## Data Cleaning
+To properly analyze the data and build models to make predictions, the first step is to clean the data. The vast majority of the data was already fairly clean and ready for analysis, but we began by reading in the data, cleaning variable names, making categorical data factors, and making continuous data of type numeric. We also decided to exclude the variable "id" since it will not be relevant to our analysis. 
+```{r, warning = FALSE, include=FALSE}
+# data cleaning
+stroke_data <- read_csv("./data/healthcare-dataset-stroke-data.csv")
+stroke_data <-  janitor::clean_names(stroke_data)
+
+# Convert BMI to numeric
+stroke_data$bmi <- as.numeric(stroke_data$bmi)
+
+# change categorical variables to factors
+stroke_data$gender <- ifelse(stroke_data$gender == "Other", "Female", stroke_data$gender)
+stroke_data$gender = as.factor(stroke_data$gender)
+stroke_data$hypertension = as.factor(ifelse(stroke_data$hypertension == 1, "Yes", "No"))
+stroke_data$heart_disease = as.factor(ifelse(stroke_data$heart_disease == 1, "Yes", "No"))
+stroke_data$ever_married = as.factor(stroke_data$ever_married)
+stroke_data$work_type = as.factor(stroke_data$work_type)
+stroke_data$residence_type = as.factor(stroke_data$residence_type)
+stroke_data$smoking_status = as.factor(stroke_data$smoking_status)
+stroke_data$stroke = as.factor(ifelse(stroke_data$stroke == 1, "Yes", "No"))
+# remove id variable
+stroke_data = stroke_data[,2:12]
+# change from tibble to dataframe
+stroke_data = as.data.frame(stroke_data)
+```
+
+The resulting dataset contains `r nrow(stroke_data)` patient records and `r ncol(stroke_data)` columns. The dependent variable is the binary variable "stroke" with response values "Yes" and "No". Other variables include: gender, age, hypertension, heart disease, ever been married, work type, residence type, average glucose level, BMI and smoking status. A detailed list of all the variables in the dataset and their corresponding levels are available in the appendix.
+
+# EDA
+To create a graphical summary of the numeric data, we used featurePlot. Note that to produce the density plots for this dataset we need to exclude the categorical variables, so they were removed.
+```{r, echo=FALSE}
+theme1 <- transparentTheme(trans = .4)
+trellis.par.set(theme1)
+
+featurePlot(x = stroke_data[, c(2,8,9)],
+            y = stroke_data$stroke, 
+            scales = list(x = list(relation = "free"), 
+                          y = list(relation = "free")), 
+            plot = "density", 
+            pch = "|",
+            auto.key = list(columns = 2))
+```
+
+From the plots, we can see that the distribution of BMI and average glucose level for patients who experienced a stroke, versus patients who didn't are fairly similar. However, the distribution of age across the two groups is fairly different. Patients who experienced a stroke tended to be of a higher age.
+
+To visualize the categorical variables, we decided to create plots of the relative proportion of variable levels faceted by stroke occurrence. These plots help visualize any noticeable differences in the distribution of the categorical variables by stroke type.
+
+```{r, echo=FALSE}
+gender_plot <- ggplot(stroke_data, aes(x = gender)) +  
+  geom_bar(aes(y = ..prop.., group = 1), fill = 'blue') + labs(x = 'gender') + 
+  facet_wrap(~ stroke) 
+
+hypertension_plot <- ggplot(stroke_data, aes(x = hypertension)) +
+geom_bar(aes(y = ..prop.., group = 1), fill = 'blue') +  
+  labs(x = 'hypertension') + facet_wrap(~ stroke)
+
+heart_disease_plot <- ggplot(stroke_data, aes(x = heart_disease)) +
+geom_bar(aes(y = ..prop.., group = 1), fill = 'blue') +  
+  labs(x = 'heart_disease') + facet_wrap(~ stroke)
+
+ever_married_plot <- ggplot(stroke_data, aes(x = ever_married)) +
+geom_bar(aes(y = ..prop.., group = 1), fill = 'blue') +  
+  labs(x = 'ever_married') + facet_wrap(~ stroke)
+
+work_type_plot <- ggplot(stroke_data, aes(x = work_type)) +
+geom_bar(aes(y = ..prop.., group = 1), fill = 'blue') +  
+  labs(x = 'work_type') + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~ stroke)
+
+residence_type_plot <- ggplot(stroke_data, aes(x = residence_type)) +
+geom_bar(aes(y = ..prop.., group = 1), fill = 'blue') +  
+  labs(x = 'residence_type') + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~ stroke)
+
+smoking_status_plot <- ggplot(stroke_data, aes(x = smoking_status)) +
+geom_bar(aes(y = ..prop.., group = 1), fill = 'blue') +  
+  labs(x = 'smoking_status') + theme(axis.text.x = element_text(angle = 90)) + facet_wrap(~ stroke)
+
+residence_type_plot + hypertension_plot + heart_disease_plot + ever_married_plot + plot_layout(ncol = 2) + 
+  plot_layout(widths = c(.1, .1), heights = c(.1, .1)) + plot_annotation(title = "Relative Proportion of Variables By Stroke Occurence")
+
+work_type_plot + smoking_status_plot + gender_plot + plot_layout(ncol = 2)
+
+```
+
+From the visualizations, we can see that among those who experienced strokes: a noticeably higher proportion of individuals had hypertension, heart disease, have ever been married, have formerly smoked or smoke currently. These variables could be potential indicators of stroke occurrence in the models.
+
+# Modeling
+To begin the modeling process, we split the data into training (75%) and test (25%) data. Since all the remaining predictors in the dataset are potential risk factors for strokes, we decided to include them in all of the following models.
+```{r, include=FALSE}
+set.seed(1)
+rowTrain <- createDataPartition(y = stroke_data$stroke, p = .75, list = FALSE)
+
+trainData <- stroke_data[rowTrain, ]
+testData <- stroke_data[-rowTrain, ]
+```
+
+We can examine how many rows contain missing data in the training and test datasets.
+```{r, include=FALSE}
+nrow_missing_train <- nrow(trainData %>% filter_all(any_vars(is.na(.))))
+nrow_missing_test <- nrow(testData %>% filter_all(any_vars(is.na(.))))
+```
+
+There are `r nrow_missing_train` rows in the training data containing missing values, and there are `r nrow_missing_test` rows in the test data containing missing values.
+
+## Imputation
+We apply the k nearest neighbor (k = 5) method for imputation where we assume any missing data is missing at random.
+```{r, include=FALSE}
+rec <- recipe(stroke ~., data = trainData) %>%
+  step_impute_knn(all_predictors(), neighbors = 5) %>%
+  step_center(all_numeric_predictors()) %>%
+  step_scale(all_numeric_predictors())
+
+prep <- prep(rec, training = trainData)
+trainData_pp <- as.data.frame(bake(prep, new_data = trainData))
+testData_pp <- as.data.frame(bake(prep, new_data = testData))
+```
+
+The training data now contains `r nrow(trainData_pp)` rows. The test data now contains `r nrow(testData_pp)` rows.
+
+## Model Fitting
+```{r, include=FALSE}
+ctrl <- trainControl(method = "repeatedcv", 
+                     repeats = 5,
+                     summaryFunction = twoClassSummary,
+                     classProbs = TRUE)
+```
+The resampling method we used for all of the models is as follows: k-fold cross validation, two class summary (since the ROC curve is only for two classes), and classProbs = T, since AUC/ROC is the evaluation criteria. 
+
+## Penalized Logistic Regression
+The first model we fit to the dataset was Penalized Logistic Regression. Some assumptions of logistic regression include requiring the observations to be independent of each other, little or no multicollinearity among independent variables, and linearity of independent variables and log odds. These assumptions are also limitations of the model.
+```{r, include=FALSE}
+glmnGrid <- expand.grid(.alpha = seq(0, 1, length = 21), 
+                        .lambda = exp(seq(-8, 2, length = 100)))
+
+set.seed(1)
+model.glmn <- train(stroke ~ ., 
+                    data = trainData_pp, 
+                    method = "glmnet",
+                    tuneGrid = glmnGrid,
+                    metric = "ROC",
+                    trControl = ctrl)
+```
+
+The tuning parameter in the penalty term of the model controls its flexibility. We decided to test a grid of tuning parameters. For alpha, since we wanted to use the elastic net method, we created a sequence from 0 to 1. For lambda, we created a sequence of numbers to test different values. The model then selects optimal values from the grid which are: alpha = `r model.glmn$bestTune$alpha` and lambda = `r model.glmn$bestTune$lambda`. To display this visually, we created a plot of the model AUC for various tuning parameters in the grid. This plot can be viewed in the appendix.
+
+4 predictors are included in the final model, as seen when the coefficients are extracted.
+```{r, echo=FALSE}
+coef <- coef(model.glmn$finalModel, model.glmn$bestTune$lambda)
+
+matrix = as.matrix(coef)
+df = as.data.frame(matrix)
+colnames(df) = c("Final Model Coefficients")
+
+knitr::kable(df[c(1,3:5,12), 1, drop = FALSE])
+```
+
+These include age, having hypertension, having heart disease and average glucose level. This suggests they play important roles in predicting the response.
+
+## MARS
+Next, we trained a MARS model on the imputed training data.  
+```{r warning=FALSE, message=FALSE, include=FALSE}
+set.seed(1)
+mars.fit <- train(x = data.frame(trainData_pp[,1:10]),
+                  y = pull(trainData_pp, stroke),
+                  preProcess = c("center", "scale"),
+                  method = "earth",
+                  tuneGrid = expand.grid(degree = 1:3,
+                                         nprune = 2:22),
+                  metric = "ROC",
+                  trControl = ctrl)
+```
+
+The MARS model has two tuning parameters: degree and nprune. Degree is the degree of interaction and nprune is the number of retained terms. We decided to test a grid of tuning parameters. The value of degree that maximizes the cross-validated AUC is `r mars.fit$bestTune$degree`, and the value of nprune that maximizes the cross-validated AUC is `r mars.fit$bestTune$nprune`. The cross-validation plot can be viewed in the appendix. 
+
+The model that maximizes the cross-validated AUC can be viewed in the appendix.
+
+A limitation of MARS models is that they can suffer from high variance. 
+
+## SVM with Linear Kernel
+The next model we fit to the imputed training data was a Support Vector Machine with a Linear Kernel. An assumption of the model is that the data is linearly separable. This is also a limitation of the model, as they don't perform well when this isn’t the case.
+```{r include =FALSE}
+set.seed(1)
+svml.fit <- train(stroke ~ . , 
+                  data = trainData_pp,
+                  method = "svmLinear",
+                  tuneGrid = data.frame(
+                    C = exp(seq(-7,2,len = 10))),
+                  metric = "ROC",
+                  trControl = ctrl)
+```
+
+The model contains a tuning parameter C, also known as Cost, that determines the possible misclassifications. It essentially imposes a penalty to the model for making an error: the higher the value of C, the less likely it is that the SVM algorithm will misclassify a point. We decided to test a grid of tuning parameters for C. The model then selects the optimal value from the grid which maximizes the model AUC. That value is C = `r svml.fit$bestTune$C`. To display this visually, we created a plot of the model AUC for various values of the tuning parameter in the grid. This plot can be viewed in the appendix.
+
+The final SVM with a linear kernel that maximizes the cross-validated AUC needed 421 support vectors to fit the line. This model can be viewed in the appendix.
+
+## SVM with Radial Kernel
+We then trained a Support Vector Machine with a Radial Kernel on the imputed training data. 
+```{r include = FALSE}
+svmr.grid <- expand.grid(C = exp(seq(-2,3,len = 10)),
+                         sigma = exp(seq(-8,-1,len = 20)))
+
+set.seed(1)
+svmr.fit <- train(stroke ~ . , 
+                  data = trainData_pp,
+                  method = "svmRadialSigma",
+                  tuneGrid = svmr.grid,
+                  metric = "ROC",
+                  trControl = ctrl)
+```
+
+The model has two tuning parameters: C and sigma. C quantifies the cost of misclassification and sigma is related to the flexibility of the decision boundary. We decided to test a grid of tuning parameters. The values of C and sigma that maximize the cross-validated AUC are `r round(svmr.fit$bestTune$C, 3)` and `r round(svmr.fit$bestTune$sigma, 5)`.The cross-validation plot can be viewed in the appendix.
+
+The final SVM with a radial kernel that maximizes the cross-validated AUC needed 387 support vectors to fit the line. This model can be viewed in the appendix.
+
+A limitation of SVMs is the black box nature of these functions. The use of kernels to separate the data makes them difficult to interpret. SVMs also do not directly provide probability estimates.
+
+## Random Forest
+For our final model, we trained a Random Forest model on the imputed training data.
+```{r, include=FALSE}
+rf.grid <- expand.grid(mtry = 1:10,
+                       splitrule = "gini",
+                       min.node.size = 1:6)
+
+set.seed(1)
+rf.fit <- train(stroke ~ . ,
+                trainData_pp,
+                method = "ranger",
+                tuneGrid = rf.grid,
+                metric = "ROC",
+                trControl = ctrl)
+```
+The tuning parameters for the model are mtry, splitrule, and min.node.size. For the splitrule we specified "gini" which corresponds to the gini index, since this is a classification problem. We then decided to test a grid of tuning parameters for mtry and min.node.size. mtry is the number of randomly selected predictors at each cut in the tree. We created a grid from 1 to 10, where 10 is the number of predictors in the dataset.  min.node.size controls the size of the tree, so we created a sequence of numbers to test different values. The parameter is the minimum number of observations in a terminal node.  The model then selects optimal values from the grid which are: mtry = `r rf.fit$bestTune$mtry` and min.node.size = `r rf.fit$bestTune$min.node.size`. The cross-validation plot can be viewed in the appendix.
+
+A limitation of random forests is that it can overfit datasets that are particularly noisy. In addition, for data including categorical predictor variables with different number of levels, random forests are biased in favor of those predictors with more levels.
+
+## Comparing Models
+To decide which model we will use to predict the response variable, let's use the AUC to compare model performance.
+```{r, echo=FALSE}
+resamp <- resamples(list(glmn = model.glmn,
+                         mars = mars.fit,
+                         svml = svml.fit,
+                         svmr = svmr.fit,
+                         rf = rf.fit))
+
+tibble(model = c("Penalized Logistic Regression", "MARS", 
+                 "SVM (Linear Kernel)", "SVM (Radial Kernel)",
+                 "Random Forest"),
+       AUC = c(round(mean(unlist(select(resamp$values, "glmn~ROC"))), 3),
+               round(mean(unlist(select(resamp$values, "mars~ROC"))), 3),
+               round(mean(unlist(select(resamp$values, "svml~ROC"))), 3),
+               round(mean(unlist(select(resamp$values, "svmr~ROC"))), 3),
+               round(mean(unlist(select(resamp$values, "rf~ROC"))), 3))) %>%
+  arrange(desc(AUC)) %>%
+  knitr::kable()
+```
+
+The penalized logistic regression model has the highest cross-validated AUC and will be used as the final model.
+
+Let's get its AUC on the imputed test dataset and plot the ROC curve.
+
+```{r message=FALSE, echo=FALSE}
+pred.glmn <- predict(model.glmn, newdata=trainData_pp, type= "prob")[,1]
+roc.glmn <- roc(trainData_pp$stroke,pred.glmn)
+auc <- c(roc.glmn$auc[1])
+modelName <- c("Penalized Logistic Regression ")
+
+ggroc(list(roc.glmn),legacy.axes = TRUE) + scale_color_discrete(labels=paste0(modelName,"(",round(auc,3),")"), name="Model (AUC)") +
+  geom_abline(intercept=0,slope=1,color="grey") +
+  theme_bw() +
+  labs(title = "AUC curve on Imputed Test Data") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+We will now make a Confusion Matrix
+
+```{r, echo=FALSE}
+test.pred.prob <- predict(model.glmn, newdata = testData_pp[,1:10],
+                          type = "prob")[,2]
+test.pred <-  rep("No",length(test.pred.prob))
+test.pred[test.pred.prob > 0.5] <- "Yes"
+test.pred <- factor(test.pred,c("No","Yes"))
+
+conf = confusionMatrix(data = test.pred,
+                reference = testData_pp$stroke,
+                positive = "Yes")
+
+knitr::kable(conf$table)
+```
+
+From the confusion matrix we have a `r conf$overall[1]*100`% accuracy, and thus a testing error rate of 4.86%. From the table, we can see that our model is not able to actually detect stroke cases at a 50% threshold. We should consult with experts on stroke to determine what threshold to use. The full confusion matrix is available in the appendix.
+
+## Conclusion
+The main takeaways from this report are that age, hypertension, heart disease and average glucose level each have a positive relationship with stroke. In considering the cross-validated model performance of penalized logistic regression, MARS, support vector machine with a linear kernel, support vector machine with a radial kernel, and random forest, penalized logistic regression has the highest cross-validated model performance. Additionally, for this model, the threshold needs to be adjusted, in consultation with experts on stroke, to detect stroke cases as the prevalence of stroke in this dataset is low. Individuals cannot control aging, but they can focus on diminishing other risk factors such as hypertension, heart disease and average glucose level, with methods such as a healthy diet, frequent exercise, and stress reduction. These results were also largely expected due to significant scientific research conducted on risk factors for strokes. 
+
+## Appendix
+
+### Variables and Levels of Variables in Dataset
+1. Gender (factor)
+
+* Female
+* Male
+2. Age (numeric)
+3. Hypertension (factor)
+
+* Yes
+* No
+4. Heart disease (factor)
+
+* Yes
+* No
+5. Ever been married (factor)
+
+* Yes
+* No
+6. Work type (factor)
+
+* Private
+* Self-employed
+* Children
+* Government job
+* Never worked
+7. Residence type (factor)
+
+* Yes
+* No
+8. Average glucose level (numeric)
+9. BMI (numeric)
+10. Smoking status (factor)
+
+* Formerly smoked
+* Smokes
+* Never smoked 
+* Unknown
+* Other
+11. Stroke (factor)
+
+* Yes
+* No
+
+### Penalized Logistic Regression Cross-Validation Plot
+```{r, echo=FALSE}
+myCol <- rainbow(25)
+myPar <- list(superpose.symbol = list(col = myCol),
+superpose.line = list(col = myCol))
+plot(model.glmn, par.settings = myPar, xTrans = log)
+```
+
+### MARS Cross-Validation Plot
+```{r, echo=FALSE}
+ggplot(mars.fit) +
+  theme_bw() +
+  labs(title = "Cross-validated AUC as a function of \n Number of Terms Colored by Degree",
+       x = "Number of Terms",
+       y = "Cross-validated AUC") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+### MARS Final Model
+```{r, echo=FALSE}
+final_model_mars <- coef(mars.fit$finalModel)
+terms_mars <- final_model_mars %>%
+  data.frame() %>%
+  labels() %>%
+  unlist()
+tibble(terms = terms_mars[1:5], est = pull(as_tibble(final_model_mars), value)) %>%
+  knitr::kable(col.names = c("term", "estimate"))
+```
+
+### SVM (Linear Kernel) Cross-Validation Plot
+```{r, echo=FALSE}
+plot(svml.fit, highlight = TRUE, xTrans = log)
+```
+
+### SVM (Linear Kernel) Final Model
+```{r, echo=FALSE}
+svml.fit$finalModel
+```
+
+### SVM (Radial Kernel) Cross-Validation Plot
+```{r, echo=FALSE}
+myCol <- rainbow(20)
+myPar <- list(superpose.symbol = list(col = myCol),
+              superpose.line = list(col = myCol))
+plot(svmr.fit, highlight = TRUE, par.settings = myPar)
+```
+
+### SVM (Radial Kernel) Final Model
+```{r, echo=FALSE}
+svmr.fit$finalModel
+```
+
+### Random Forest Cross-Validation Plot
+```{r, echo=FALSE}
+ggplot(rf.fit, highlight = TRUE)
+```
+
+### Penalized Logistic Regression Confusion Matrix
+```{r}
+test.pred.prob <- predict(model.glmn, newdata = testData_pp[,1:10],
+                          type = "prob")[,2]
+test.pred <-  rep("No",length(test.pred.prob))
+test.pred[test.pred.prob > 0.5] <- "Yes"
+test.pred <- factor(test.pred,c("No","Yes"))
+
+confusionMatrix(data = test.pred,
+                reference = testData_pp$stroke,
+                positive = "Yes")
+```

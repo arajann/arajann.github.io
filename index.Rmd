@@ -8,20 +8,22 @@ output:
 
 ## Information
 
-Welcome to my personal homepage! I am an avid fan coding and doing analysis in R. Within this webpage you will be able to navigate to my CV, ongoing personal projects, and sample plots I have made using existing data sets within the dashboard. Below are links to my github account, professional networks, and my email. Enjoy!
+Welcome to my personal homepage! I am an avid fan coding and doing analysis in R. Within this webpage you will be able to navigate to my CV, past and ongoing project. Below are links to my github account, professional networks, and my email. Enjoy!
 
 
 ## Useful links
 
 
 [Github Account](https://github.com/arajann)
+[LinkedIn Account](https://www.linkedin.com/in/anand-rajan-73544522a/)
 
 
 ## Personal Information
 
 [About me](about.html)
 
-Email: ar4173@cumc.columbia.edu
+Email: anandrajan44@gmail.com
+
 
 
 ![](https://digmodification.files.wordpress.com/2018/01/matrix-code-gif1.gif)

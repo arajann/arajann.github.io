@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>A Phase III Superiority Trial Proposal of CRISPR-Cas9 Gene Editing Therapy vs Hydroxyurea for Sickle Cell Disease Patients</title>
+
+<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="about.html">About</a>
+</li>
+<li>
+  <a href="childhood-trauma-study.html">Childhood Trauma Study</a>
+</li>
+<li>
+  <a href="ML-Methods-to-Predict-Stroke.html">ML Methods to Predict Stroke</a>
+</li>
+<li>
+  <a href="RCT-Proposal.html">Randomized Control Trial Proposal</a>
+</li>
+<li>
+  <a href="dashboard.html">Dashboard</a>
+</li>
+<li>
+  <a href="mailto:&lt;anandrajan44@gmail.com&gt;">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/arajann/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">A Phase III Superiority Trial Proposal of CRISPR-Cas9 Gene Editing Therapy vs Hydroxyurea for Sickle Cell Disease Patients</h1>
+
+</div>
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Sickle cell disease(SCD) patients suffer from an immense pain burden, including both chronic and acute pain. Chronic pain in SCD patients is characterized as ongoing pain either at a single or multiple locations on the body.1 Pain associated with vaso-occlusive crises(VOCs) is described as severe, acute pain that is correlated with hospitalization and mortality.1 The current treatment approach for SCD is centered around control and prevention of VOCs.1 Hydroxyurea was the first FDA approved drug after a randomized placebo-controlled phase III trial showed significant reduction in VOCs compared to the control group.1-4 Prior to the FDA approval of hydroxyurea, there were no effective medications in reducing the frequency of VOCs, as rather the approach was to treat onset of crises with pain medications such as opioids, NSAIDs, and Acetminophen.1 Another widely-used treatment is red blood cell transfusions which are seen to both reduce VOCs and other acute complications such as stroke in children afflicted with SCD.3-4 Though current treatment options reduce the frequency of VOCs, none are effective in complete prevention of crises – thus the need to continue research for innovative therapies such as stem cell transplant and CRISPR therapy. Initial results of clinical research on gene-editing therapy show elimination of VOCS, but further research must be done to show efficacy and safety on a wider scale.5 Therefore, the rationale for the trial is to evaluate efficacy of CRISPR therapy, new intervention, in reducing or eliminating Vaso-occlusive episodes compared to current standard treatment of hydroxyurea, an active control. We propose a phase III, double-blinded randomized superiority design with two parallel groups to evaluate the following clinical question. Among patients at least the age of 18 with sickle cell disease, is CRISPR-CAS-9 Therapy (single dose of CTX001 Infusion) superior to Hydroxyurea (15 milligram per kilogram of body weight) in reducing the frequency of Vaso-occlusive crises over the 2 years of individual follow-up? To answer the clinical question we will enroll patients in a multicenter trial across the United States and Canada. The trial population is patients that are at least 18 years old of any race or gender diagnosed with sickle cell disease, who experience frequent Vaso-occlusive episodes.</p>
+</div>
+<div id="objectives" class="section level1">
+<h1>Objectives</h1>
+<p>Primary The primary, patient important outcome is the presence or absence of Vaso-occlusive episodes. Vaso-occlusive episodes are crises that result in significant amounts of pain and often leads to hospitalization.1 Therefore incidence of VOCs have significant impacts on quality of life. Elimination of these crises would result in significantly greater quality of life and potentially prevent mortality.6 To evaluate the primary outcome, we will conduct an intent to treat analysis. The null hypothesis is that there is no difference in the proportion of patients who did not experience a Vaso-occlusive episode between the CRISPR CAS-9 therapy group and the Hydroxyurea treatment group over 24 months of follow-up among intent to treat patients at the 5% significance level(p-value &gt; 0.05). The two alternative hypotheses are that CRISPR Cas-9 therapy is superior to hydroxyurea, or hydroxyurea is superior to CRISPR Cas-9 therapy over 24 months of follow-up among intent to treat trial patients. The two alternative hypotheses utilize proportion of patients who did not experience a VOC as the measure for superiority that the 5% significance level. Based on our hypotheses, a two-sided test is appropriate. Though the clinical purpose of the trial is investigate whether CRISPR Cas-9 Therapy is superior to Hydroxyurea, our hypotheses allow us to be open to the alternative where Hydroxyurea is superior.</p>
+<p>Secondary A secondary outcome of the clinical trial is time to first VOC. Similarly to our primary patient outcome, we will conduct a two-sided test at a significance level of 5%. The null hypothesis is that there is no difference in median time to first VOC between the CRISPR-Cas 9 group and the Hydroxyurea group over 24 months of follow-up among intent to treat patients. The two alternative hypotheses are that CRISPR-Cas 9 is superior to hydroxyurea, or Hydroxyurea is superior to CRISPR-Cas 9 using the median time to first VOC as the measure among intent to treat trial patients. Another secondary outcome is the time to second VOC. Though we have time to first VOC as a secondary outcome, treatments like CRISPR CAS-9 or hydroxyurea often take time before we observe clinical benefits.2,5 Therefore measuring time to second VOC would be a useful outcome measure. We will conduct a two-sided test at a significance level of 5%. The null hypothesis is that there is no difference in median time to second VOC between the CRISPR-Cas 9 group and Hydroxyurea group over 24 months of follow-up among intent to treat patients. The two alternative hypotheses are that CRISPR-Cas 9 is superior to hydroxyurea, or Hydroxyurea is superior to CRISPR-Cas 9 using the median time to second VOC as the measure among intent to treat trial patients. The final secondary outcome is fetal hemoglobin levels measured via blood draws.5 This is a two-sided analysis where our null hypothesis is that there is no difference in mean fetal hemoglobin levels between the CRISPR Cas-9 arm and the Hydroxyurea arm at the 5% significance level over 24 months of follow-up among intent to treat patients. The alternative hypotheses are that CRISPR-Cas 9 is superior to Hydroxyurea, or Hydroxyurea is superior to CRISPR-Cas 9 using mean fetal hemoglobin levels as the measure. Safety A safety analysis will be measured at the 30 days and 60 days from follow up, and every two months thereafter. Though safety outcomes will only be formally measured every two months via telephone interview, patients will be closely monitored throughout the duration of follow-up for incidence of adverse events or serious adverse events. Three major safety outcomes were chosen through reviewing the safety outcomes of the phase II CRISPR trials and the phase III placebo-controlled for L-Glutamine.5,7 The indicators are pneumonia, chest pain, and musculoskeletal pain. Pneumonia will be assessed via chest x-rays – a dichotomous(Y/N) variable.8 Chest pain will be measured either via a physical examination or asking specific questions to the patient – a dichotomous(Y/N) variable.9 Musculoskeletal pain will be measured via the visual analog scale, where scores are recorded by making a handwritten mark on a 10-cm line that represents a continuum between no pain and worst pain – a discrete variable.10 # Trial Design Randomized Control Trial Features The CRISPR Cas-9 Trial is a double-blinded, randomized phase III superiority trial with an active control. The trial is an intervention as opposed to an observational study as we are giving patients treatments in both arms. Moreover, there is an active control group that will receive hydroxyurea, a widely accepted current drug for treatment for SCD patients, along with current standard of care for pain management. Finally, we are enrolling patients based on sickle cell disease status, and prospectively following patients to observe outcomes. Thus, criteria for a prospective RCT is met. Patients will be randomized into two groups: new intervention and active control. The new intervention group will receive 8 weeks of red blood cell exchange transfusions prior to first mobilization.5 After completion of transfusions, the patient will undergo stem cell mobilization with plerixafor(0.24 mg/kg of bodyweight).5 After mobilization, CD34+ cells will be collected from patients via apheresis(removal of blood plasma via blood withdrawal).5 The cells will then be sent off to CRISPR therapeutics to manufacture CTX001. Prior to CTX001 infusion, patients will be administered busulfan via IV daily at a starting dose of 3.2/mg per kg per day for four consecutive days.5 After the last busulfan dose, primary investigators will infuse a single dose of the CTX001(3.1 *106 CD34+ cells per kilogram) to the patient.5 There will be patient follow-up 30 and 60 days after infusion to see if there is neutrophil and platelet engraftment – engraftment indicates successful infusion of CTX001. Engraftment will be evaluated through bloodwork, which would be drawn by primary investigators and sent to CRISPR therapeutics. After discharge, patients will begin taking a placebo version of hydroxyurea once a day. The active control group will receive 8 weeks of dummy red blood cell transfusions. After the eight weeks of placebo infusions, patients will be given a placebo plerixafor. After the dummy mobilization process, CD34+ cells will be collected from patients via apheresis and then sent to CRISPR therapeutics who will manufacture a placebo version of the CTX001. Primary investigators will administer the placebo version of CTX001 to patients after administering a placebo busulfan for four days. At the 30 day and 60 day follow-up post infusion, researchers will still send a blood sample to the CRISPR therapeutics to maintain blindness. Once the patient is discharged, they will begin hydroxyurea treatment. Based on Mayo Clinic guidelines, for those randomized to the control group, patients will take an oral tablet of Hydroxyurea once a day and the dose is 15 milligrams per kilogram of body weight.11 If they miss a dose, patient will be recommended to take a dose a soon as possible, however it is not advised to double dose. Throughout the duration of follow-up, patients in both treatment arms will be treated for any pain with the standard of care – pain managing medications. According to the guidelines provided by the National Heart, Lung, and Blood institute, acute and chronic pain is managed with opioids along with acetaminophen or NSAIDs, thus if patient experiences either chronic or acute pain, they will be treated with the appropriate medication.6<br />
+The proposed trial will also conduct an intent to treat analysis meaning analysis will include every randomized patient and patients will be analyzed in the group they were randomized to. Cases of non-compliance or cross-over will be included in the ITT analysis. Finally, the trial will aim to ascertain a reliable final outcome status for every randomized patient.</p>
+<p>Blinding The investigators at Vertex Pharmaceuticals, the main sponsor of the trials, along with any other members involved in conducting the trial will be blinded to the treatment assignment. The clinicians administering therapies and conducting patient evaluation will also be blinded to treatment assignment. To ensure blinding for both parties, CRISPR therapeutics, the company that will manufacture the CTX001, will play a pivotal role. CRISPR therapeutics will send clinicians the materials for the transfusion and mobilization process. Clinicians will receive identical packages for which one is packed RBCs and plerixafor and the other is placebo transfusions(0.9% saline) and placebo plerixafor. The packages will have identifications codes written on them to denote which package is for the active transfusion and mobilization process and which package is for the dummy process. But clinicians will not know the meaning of the identification codes. When clinicians send the CD34+ cells to CRISPR therapeutics, they will note the identification code of the package they used to do the transfusion and mobilization process. Once CRISPR receives the cells with the identification code, they will know whether to send back an active CTX0001 + busulfan or placebo CTX0001 + placebo busulfan. After last patient visit, CRISPR therapeutics will inform investigators of who received active version of CTX001 as well as whether individuals had successful engraftment. Patients enrolled in the study will be blinded to their own and other participants enrolled intervention arms. In order to blind patients randomized to the new intervention group(CRISPR therapy), after completing CTX001 infusion, they will receive a set of medication bottles containing the placebo version of hydroxyurea. The bottle will contain capsules to be taken orally once a day. The capsules and medication bottle will look identical to the active version of Hydroxyurea. To blind patients randomized to the active control group(Hydroxyurea), patients will go through eight weeks of dummy red blood cell transfusions along with a dummy mobilization process. Moreover, patients will undergo the dummy CTX0001 infusion process. The final step is to have their blood drawn at 30 day and 60 day follow-up post discharge to check for “engraftment”. Once discharged, patients will receive medication bottles for the active version of hydroxyurea to be taken once daily orally. The dummy infusion process and the administration of placebo and active Hydroxyurea will help maintain blinding. There are significant advantages to blinding for the trial. For one, blinding preserves the benefits of randomization by protecting against bias after trial start and over the course of trial. Moreover, neither clinicians nor patients can consciously or unconsciously favor one intervention over the other. The process to ensure double-blinding is quite difficult in the context of this trial given the distinctly different natures of both interventions, but the benefits of protecting against bias far outweigh the costs.</p>
+<p>Randomization Patients who complete pre-trial screening and complete the informed consent process will have their information sent from the trial site to a randomization database – the DCC. The database will then send a patient identification code and treatment assignment back to trial site. Randomization will be done in a 1:1 ratio using a randomly permuted blocks method. The block sizes for this method will be a size of 2,4, and 6 with prespecified portions of 30%, 50% and 20% respectively. The randomly permuted blocks method is utilized as it makes it difficult to predict treatment arm even if block permutation code is broken for an individual block at some point in the allocation process. For this reason, randomly permuted blocks are more appropriate than fixed block randomization. Furthermore the randomization process will be stratified by trial site. The justification behind stratification by site lies behind the unmeasured confounding between sites. Certain sites could have patients with higher frequency of VOCs as opposed to others. Thus stratified randomization will guarantee a balance of covariates given the variation of both measured and unmeasured covariates from site to site. Additionally, stratification protects the balance of randomization if one site leaves the trial. Stratification for frequency of VOCs prior to entry into study was considered, as we have seen this form of stratification in phase III trials for other SCD treatments, such as crizanlizumab.16 But we deemed the strata not necessary as we believe stratification by site will do an adequate job to balance baseline covariates and furthermore choosing of the strata could be highly subjective given the trial will include patients with different severities of SCD. Given the rarity of sickle cell disease as well, over stratification could lead to small cell sizes. Thus our blocking scheme will occur within trial site strata. If there are 10 trial sites, we will need 10 randomization lists to be generated by the Data Management Center using a centralized, real time randomization method. This is a major advantage as the time from patient treatment ID generation to treatment assignment to communication back to trial site is significantly reduced. Patients can begin the treatment they are assigned to shortly after randomization.</p>
+<p>Inclusion Criteria The following inclusion criteria was extracted from the previous phase II trial for CRISPR-Cas-9 therapy, along with other phase III trials for treatments aimed to prevent VOCs.5,7 To qualify for entry into study, patients must meet these criteria(justifications provided): 1. Patients must be diagnosed with sickle cell disease with documented βS/βS or βS/β0 genotype. Patients suffering from Sickle cell-β+ thalassemia have different clinical courses and mechanisms of hemoglobin deficiency. The two populations were separated in the phase II trial too. 2. Patient must be at least 18 years old. This is because the clinical nature of Sickle cell Disease is significantly different for adolescents as opposed to adults and the given the invasive nature of the intervention, it would not be appropriate for children yet.4-6 3. Patients must have a history of two or more VOCs during the year prior to study recruitment, but no upper limit. This is because we want to see the effectiveness of treatment in ill patients as opposed to those who have relatively infrequent VOCs. 4. There are no specific gender or race restrictions, but if a recruited woman plans to become pregnant during the course of the trial, they will be excluded(justification provided in exclusion critieria. 5. Patients who had red blood cell transfusions over 6 months prior to randomization are eligible. 6. Patients who had hydroxyurea over 30 days prior to randomization are eligible. Given how widely used Hydroxyurea was for SCD patients, excluding anyone who ever took hydroxyurea would likely significantly shrink our potential sample size. Exclusion Criteria: 1. Patients known to have Sickle cell-β+ thalassemia, otherwise known as Transfusion-dependent β thalassemia. As stated in the inclusion criteria, the mechanism of disease is different, and thus prior trials separated the two types of sickle cell disorders. 2. Patients who have been hospitalized within the past two months for an unspecified health complication unrelated to sickle cell disease.<br />
+3. Patients who are ongoing participants in stem cell transplant research. Given CRISPR therapy requires stem cell injection, patients who have had prior stem cell transplants or ongoing could complicate ability to synthesize CTX001. 4. Patients who are ongoing participants in a long-term therapy program for RBC transfusion. The safety of red blood cell transfusions and hydroxyurea treatment has yet to be fully studied, thus we want to avoid any complications or potential adverse events. 5. Pregnant women or women who expect to be pregnant. Women with sickle cell disease require early prenatal care with careful monitoring through pregnancy. Thus given the novel nature of the new intervention and documented adverse events, it would be inappropriate to put pregnant women at higher risk for miscarriage or pregnancy complications, given they are already a high risk population. 6. Patients with significant renal and liver disease.</p>
+<p>Enrolling Centers The eligibility for trial sites will be across both the United States and Canada. But given the scope of the study, there is a possibility sites from Europe could be included in the future. The key characteristics we will be looking for choosing trial sites will be but not limited to the following: medical center known for high quality care of sickle cell disease, extensive research experience in conducting clinical trials(a bonus if prior work in sickle cell disease clinical trials), clinicians on staff with experience in treating sickle cell disease, and clinicians on staff with experience of stem cell transplantation. Thus based on this criteria and the complicated nature of administration of the new intervention, we expect to mainly utilize major medical centers across the United States and Canada. Some potential medical centers include Mt. Sinai, UCLA medical center, McGill University Health Center, Mayo Clinic, Johns Hopkins Hospital, New York Presbyterian hospital, and more. Data Coordination and Trial management For the scope of this multicenter trial, there will be a central Data Coordination Center. The critical role of the DCC is to review and monitor data quality throughout the duration of the trial. The DCC will be rigorously and frequently reviewing safety data from first patient enrollment till last patient completes 24-month follow-up. There will be three trial coordinators with extensive prior experience, and each enrolling center will have a trial manager. The role of the clinical trial managers is to implement and track clinical monitoring. This is to ensure compliance with protocol, good clinical practice, and local/federal regulations. Other roles for clinical managers include oversight of budget, patient recruitment, and training. Vertex pharmaceuticals has allocated a significantly large budget for the phase III trial(estimated around $900 million) in order to accommodate for the necessary staff for the DCC and Clinical trial management.11</p>
+</div>
+<div id="data-collection-and-follow-up" class="section level1">
+<h1>Data Collection and Follow-Up</h1>
+<p>Outcome Details The primary efficacy outcome is the presence or absence of Vaso-occlusive crises during the 24 months of patient follow-up. It is a dichotomous outcome. The definition of a VOC in the context of the trial is an acute episode of severe pain typically localized to extremities, chest or back that resulted in hospitalization.1,6,14 If patient indicates that they sought medical care due to severe pain in multiple parts of their body, they will be classified as having had a VOC.12 There is no validated diagnostic tool to measure VOC.6 But to measure whether a patient experienced a VOC in the context of this trial will be done via a Qualtrics survey. Patients enrolled in the study will be asked to fill out a Qualtrics survey every two weeks. The survey will include simple questions to gauge whether or not patients had a pain crises in the past two weeks. If the patient does indicate having had pain crises, subsequent questions will be asked as to the severity of the pain on a Likert scale, where in the body they felt the pain, and whether they had to seek medical care. If patient indicates high severity of pain that led to hospitalization, they will be marked down as having experienced a VOC. Furthermore, if patient did seek medical care, we will evaluate patient records to confirm incidence of VOC. Upon confirmation of VOC, the data coordinator will report the event into the trial database within 24 hours in order to be reviewed by the DCC. Moreover, the data coordinator will also report all information associated with the VOC event, including date of onset, type of pain, etc. Though the survey tool is not validated, the questions asked reflect the widely studied pain patterns of VOCs.6 We can infer using the survey and reviewing of patient hospital records, if they exist, to determine whether or not the patient experienced a VOC. If at no point within the 24 months of follow-up does the patient indicate this type of painful crises via the survey, they will be considered to have no VOCs. The variable that will be calculated is a proportion that is equal to the number patients who did not experience a VOC divided by total number of patients in that arm. Remember, we are conducting an intent to treat analysis, thus patients in the numerator and denominator are from the same arm and patients are grouped by the arm they were randomized to. We will be comparing the proportions of patients who did not experience a VOC between each arm through a Cochran-Mantel-Haenszel test, with test of homogeneity of treatment effect. The main secondary outcome is time to first VOC. This is a continuous, time-to-event measure in months that is defined as the time from randomization to first occurrence of a VOC. Patients who have no information after the baseline visit will be censored observations. The survey tool will also indicate date of onset of pain crises. If the date is missing from the survey, we will look at patient records to see date of hospitalization due to VOC. The days between randomization and date of onset of VOC will then be calculated. Overall median time to first VOC will be compared between the treatment arms using a stratified log-rank test. Additionally, Kaplan-Meier methods will also be used to estimate the median time to first VOC for both treatment arms. The data will then be inputted by the data coordinator into the trial database. For the other secondary outcome of time to second VOC, a similar process of data measurement and reporting is utilized. Time to second VOC is defined as the time from randomization to second occurrence of a VOC measured in months. The main difference with this secondary outcome compared to the main secondary outcome is that the data coordinator must verify that the patient had a recorded event of VOC prior to second occurrence of VOC. Patients who have no information after the baseline visit will also be censored for analysis of this secondary outcome. The final secondary outcome is fetal hemoglobin levels, a continuous outcome. Increased levels of fetal hemoglobin are highly associated with milder disease and indicates successful engraftment for patients who received the CTX001 infusion.5 Thus, fetal hemoglobin will be measured via bloodwork sent to CRISPR Therapeutics lab. The bloodwork will be done at the 30 and 60 day follow-up visits post discharge, and then every three months thereafter. The instrument tool, high performance liquid chromatography, utilized to measure fetal hemoglobin levels from blood drawn is highly validated.14 The instrument is validated based on literature review confirming the accuracy in measuring fetal hemoglobin (HbF).14 Fetal hemoglobin levels for patients at each visit will be entered by the data coordinator into the trial database. For the purposes of comparison, we will compare the mean fetal hemoglobin for patients in the CRISPR arm compared to hydroxyurea arm over the 24 month follow-up. The primary analysis will be the analysis of covariance test.</p>
+</div>
+<div id="statistical-considerations" class="section level1">
+<h1>Statistical Considerations:</h1>
+<p>Type of Outcome The primary outcome of interest is presence or absence of vaso-occlusive episodes, a dichotomous categorical outcome, defined from the point of randomization to end of patient follow-up. The statistical analysis for this outcome will be comparing the proportion of patients that did not experience a VOC in the CRISPR-CAS 9 therapy group vs the proportion of patients that did not experience a VOC in the hydroxyurea therapy (active control) group. The primary null hypothesis is that there is no difference in the proportion of SCD patients who did not experience a VOC between the CRISPR Cas 9 therapy arm and Hydroxyurea control arm. The two alternative hypotheses are that either the CRISPR Cas-9 therapy arm or the hydroxyurea treatment arm have higher proportions of patients that did not experience a VOC during the two years of follow-up. The treatment comparison will be evaluated using a two-sided Cochran-Mantel-Haenszel test, with a test of homogeneity of treatment effect. An odds ratio and confidence interval for the treatment effect will be produced. The type I error rate will be controlled at a two-sided alpha level of 0.05. The efficacy analysis will be an intent to treat analysis, thus patients are grouped based on treatment assignment at randomization.</p>
+<p>Power Calculation In the context of our dichotomous outcome, the effect size, otherwise known as the minimal effect detectable with a given sample size, will be the difference in proportions of patients who did not experience a VOC between the CRISPR-CAS 9 Therapy arm and the Hydroxyurea arm. For this trial we will design to have 90% power with an unadjusted effect size of 20%(Proportion for control is 0.3 and proportion for new intervention is 0.5). The justification for this unadjusted effect size value is based on previous phase III trials for and the nature of the new intervention treatment.2,16 Current literature on CRISPR-CAS 9 therapy treating Sickle Cell Disease does not discuss the minimum effect size that is clinically relevant, as the previous trial showed complete elimination of VOCs.5 To determine effect size, we will review past phase II/III trials of both hydroxyurea and other FDA approved drugs. A placebo-controlled phase III clinical trial on crizanlizumab, a recently approved FDA drug to treat SCD patients, deemed an effect size of 18% proportion difference between treatment and control arm to be clinically significant.16 For our sample size/power calculations, we assume a 5% level of significance(Type I error rate =0.05) and Type II error rate(β) of 0.1, therefore the power is 1-β equal to 0.9. Our randomization scheme is 1:1. It should be noted that the unadjusted effect size does not take into account for crossover or noncompliance. Crossover in the trial is defined as patients randomized to CRISPR CAS-9 therapy take Hydroxyurea treatment, or patients randomized to hydroxyurea treatment take CRISPR CAS-9 therapy. We expect 5% crossover from the intervention group to the active control group. There is not previous literature that discusses crossover with respects to CRISPR Cas-9 therapy. But given patients in the previous phase II trial did have adverse events due to treatment, and the accessibility of a widely established drug such as Hydroxyurea, we expect some proportion of crossover.5 On the other hand we expect 1% cross over of patients randomized to hydroxyurea arm to switch to the new intervention. We are estimating 1% based on the probability of administrative error, therefore we will take the conservative approach and deem it appropriate to include in our adjusted effect size. Non-Compliance in the trial is patients randomized to an arm do not take assigned medication. Non-compliance is a major issue in regards to adherence to hydroxyurea treatment.11-14 Thus based on previous studies we estimate non-compliance to be 30% for the hydroxyurea arm. For the active intervention, we expect 15% non-compliance. This number was estimated based on the previous phase II trial, and given that patients must undergo 8 weeks of red blood cell transfusions, there is a significant likelihood of patients not complying to have the CTX0001 infusion.5 The adjusted effected size based on these parameters is 0.208. We will present sample sizes for both unadjusted and adjusted effect sizes. But for the purposes of our trial, we will use the sample size calculated based on the adjusted effect size. Sample Size: ───────────────────────────────────────────────────────────────── Target Actual Diff<br />
+Power Power* N1 N2 N P1 P2 δ1 Alpha ─────────────────────────────────────────────────────────────────────────────────────────────────────── 0.9 0.90044 134 134 268 0.5 0.3 0.2 0.05 ────────────────────────────────────────────────────────────────── Figure3: Unadjusted Sample Size Calculation ────────────────────────────────────────────────────────────────── Target Actual Diff<br />
+Power Power* N1 N2 N P1 P2 δ1 Alpha ──────────────────────────────────────────────────────────────────────────────────────────────────────────────── 0.9 0.90109 260 260 520 0.475 0.332 0.143 0.05 ────────────────────────────────────────────────────────────────── Figure4: Adjusted Sample Size Calculation</p>
+<p>From Figure 1 and 2, we have the unadjusted and adjusted sample sizes. If the trial does not account for noncompliance and crossover, to detect a 20% difference in proportions with 90% power at a 5% significance level, we will need to enroll 268 patients (134 randomized to both arms). If the trial does account for noncompliance and crossover, our adjusted sample size significantly increases to 520 patients in total with 260 patients randomized to each arm. The adjusted sample size maintains the Type I and Type II error rate assumptions. Moreover the adjusted sample size calculated maintains a 90% power. Sensitivity and interim analysis calculations will utilize the adjusted sample size, including group-sequential procedures.</p>
+<p>From the two tables above, we see how total sample size changes when we change key parameter values, specifically effect size and power. Before we evaluate changes in sample size, we should note that sample size by arm would be 1:1. Looking at figure 3, the table represents the sensitivity with the power of 0.9 (the power we are utilizing for this trial design). On the other hand figure 4 represents the sensitivity with the power of 0.8. From both of the figures, the general trend is as we decrease the effect size, the total sample size increases. We see drastic increases in total sample size when effect size decreases by 15%. When comparing the two figures, we see that sample size significantly decreases when we decrease the power of the trial by 10%. The type I error rate(α) was not adjusted as increasing the type I error rate beyond 0.05 is generally uncommon, and below 0.05 is not necessary. Moreover from PASS runs, the changes in sample size when changing by α were not significant, holding all else equal. The sensitivity analysis is useful in the context of the CRISPR trial as we can evaluate whether current samples sizes would be too small if there were increases in non-compliance or cross-over, therefore resulting in smaller adjusted effect sizes. As stated in the power calculations, adherence to hydroxyurea treatment is a major issue. Thus, the estimated proportion of non-compliance may well be an underestimation. Given the distinct possibility of both increases in crossover and non-compliance, the sensitivity analyses informs what changes in sample size are necessary to maintain a specific power given smaller adjusted effect sizes. Furthermore, from our sensitivity analyses, we see that powering the trial at 80% instead of 90% would result in significantly lower sample sizes per arm. Therefore, given the novel and rigorous nature of the new intervention and the adherence issues with the active control, utilizing a conservative approach to choosing sample sizes would be wise. Interim Analysis Plan</p>
+<p>Figure 5: Group Sequential Tests for Two Proportions Details when Spending = O’Brien-Fleming, N1 = 266, N2 =266, P1 = 0.475, P2 = 0.332 ────────────────────────────────────────────────────────────────── Lower Upper Nominal Inc Total Inc Total Look Info Bndry Bndry Alpha Alpha Alpha Power Power ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 1 0.25 -4.33263 4.33263 0.00001 0.00001 0.00001 0.00354 0.00354 2 0.50 -2.96311 2.96311 0.00305 0.00304 0.00305 0.25601 0.25954 3 0.75 -2.35902 2.35902 0.01832 0.01625 0.01930 0.42795 0.68749 4 1.00 -2.01406 2.01406 0.04400 0.03070 0.05000 0.21377 0.90127 ──────────────────────────────────────────────────────────────────</p>
+<p>Figure 7 The interim analysis plan above illustrates the stopping boundaries of the three interim analyses before the final analysis shortly after database lock. A group-sequential design with equally spaced looks was utilized for our interim analysis plan. Thus we apply repeated significance tests to the accumulating data. Equally spacing is based on the information fraction instead of time, hence we excluded the time column from figure 5. Information fraction is approximated by the number of participants with completed follow-up at a given point divided by the total number expected. Thus, information equal to 0.25 indicates 1/4th of the expected number of participants with completed follow-up at interim look 1, ½ of expected number of participants with complete follow-up at interim look 2, ¾ of expected number of participants with complete follow-up at interim look 3, and all expected participants with complete follow-up at the last final look 4. As illustrated in figures 5 and 6, we will utilize symmetrical stopping boundaries. This is appropriate given there are two active interventions in the trial. We should note that the sample size is different in the interim analysis compared to the originally calculated adjusted sample size (n=532 vs. n=520). To control type I error rate, the Lan and DeMets spending function method with O’Brien-Flemming stopping boundaries will be used. The methods give us the z-scores for the upper and lower boundaries. If the z-score for the observed difference in the primary outcome between the interventions lies outside the upper or lower boundary, the statistical criterion for early stopping has been reached. However, other considerations such as safety will be considered before deciding to stop the trial. We will extract terminal criteria based on based on figure 5. A z-score above the upper boundary indicates that CRISPR-Cas-9 therapy is superior to hydroxyurea, whereas a z-score below the lower boundary indicates that hydroxyurea is superior to CRISPR therapy. At the first interim analysis, the z-score boundary is +/- 4.33. At the second interim analysis, z-score boundary is +/- 2.96. At the third interim analysis, z-score boundary is +/- 2.36, and at the final analysis the z-score boundary is +/- 2.01. 0.02% of the total type I error is spent at the 1st analysis (total (cumulative) alpha = 0.00001), 6.1% of the total type I error is spent by the 2nd interim analysis(total (cumulative) alpha = 0.00305), 38.6% of the total type I error spent by the 3rd interim analysis(total (cumulative) alpha = 0.0193). Thus, we have 61.4% to be spent on the final analysis at total power equals 0.9 and cumulative alpha of 0.05. The p-value for the final analysis is 0.03 since we have spent some of the alpha at previous looks. The p-value indicates the probability that the calculated test statistics is as extreme or more extreme than the critical value given the null hypothesis of no difference in proportion of individuals who experienced no VOCs is true.</p>
+<p>Appendix: Adjusted Effect Size The proportion for the new intervention group is 0.5 and the proportion for the control group of 0.3. The assumptions for the new intervention group: 5% crossover, 15% noncompliance, and the assumptions for the control group: 1% crossover, 30% noncompliance. For Intervention Group, adjusted proportion is (0.05<em>0.3) +(0.15</em>0.4) + (0.85<em>0.5) = 0.475 For active control group, adjusted proportion is (0.01</em>0.5) + (0.3<em>0.4) + (0.69</em>0.3) = 0.332 The adjusted effect size is 0.143</p>
+</div>
+<div id="safety-considerations" class="section level1">
+<h1>Safety Considerations</h1>
+<p>As part of the safety outcomes analysis, investigators will reach out to patients through phone interviews every two months following the 60 day follow-up post-discharge visit. The purpose of the phone interview is to gain information on whether patients had experienced any adverse events two months prior to the interview. Questions will be catered towards evaluating safety outcomes for patients. The first major safety outcome of interest is pneumonia. Pneumonia was chosen based on adverse events reported in the phase II CRISPR trial and the clinical history of sickle cell diseases patients. The phase II CRISPR trial reported multiple events of pneumonia in the presence of neutropenia – when one has too few neutrophils.5 Pneumonia is especially concerning as patients suffering from sickle cell disease have a higher susceptibility of developing acute infection.19 Though pneumonia resolved in a short period of time for afflicted patients in the phase II trial, the incidence of the event is worrisome enough to warrant measure as a safety outcome. In the phone interview, the data coordinator will ask the patient if they are suffering from any of the symptoms of pneumonia including but not limited to, prolonged cough, fever, or shortness of breath.20 If patients indicate continued presence of symptoms, we will ask them to come into the trial site and take a chest x-ray to determine if they are experiencing pneumonia.8 Diagnosis of pneumonia would then be immediately submitted to the DCC. The second major safety outcome is chest pain that will be measured via a physical examination at every three month follow-up visit and asking specific questions during the two month safety follow-up.9 Evaluation of chest pain is essential as one of the other major pain crises that SCD patients deal with is acute chest syndrome. Though less common than VOCs, acute chest syndrome(ACS) can be potentially life threatening.6 ACS is often characterized by chest pain, cough, fever and hypoxia.6 ACS can be triggered by pneumonia as well, thus the importance of measuring both ACS and pneumonia as safety outcomes. The third patient safety outcome of interest is musculoskeletal pain which will be measured via the visual analog scale at every three month follow-up visit, where scores are recorded by making a handwritten mark on a 10-cm line that represents a continuum between no pain and worst pain.10 Though preventing VOCs is the primary objective of the clinical trial, in general when developing novel treatments, we are also aiming to decrease the overall burden of pain faced by sickle cell disease patients. Evaluation of pain outside of acute pain crises is important as we can measure the burden of pain patients may continue to undergo despite undergoing these treatments. The goal of any clinical trial for a new intervention is to not only see improvement on a specific patient important outcome, but overall improvement to patient quality of life. . Other more general safety outcomes to be monitored are nausea, fatigue due to anemia, and headaches.</p>
+</div>
+<div id="limitations" class="section level1">
+<h1>Limitations</h1>
+<p>Though we have designed a comprehensive phase III trial to evaluate the efficacy of CRISPR Cas-9 therapy, there are many key limitations. The first major limitation is measurement of VOCs. Since there is not a validated diagnostic tool to measure the outcome, VOC events will be determined through survey tools and hospitalization records. Though there are distinct pain patterns for VOCs, the measurement via survey is prone to recall bias. Moreover, given the incomplete nature of EHR data, evaluation of hospitalization records may not provide sufficient evidence to ascertain whether the patient suffered a VOC. Furthermore, given that the measurement of other secondary outcomes is reliant on patient completion of the survey too, there are distinct possibilities of missing or incomplete information. During data collection and review, the DCC and trial managers should discuss how to handle incomplete information from surveys. Another major limitation of the trial is the effect of non-compliance. The transfusion, mobilization, and infusion process is quite invasive and time-consuming requiring extended visits and over-night stays at the hospital This process is draining for patients and their caretakers, therefore could deter patients from following through with treatment, especially if there is not marked improvement in their condition. Our approach to the informed consent process and clearly laying out the treatment will be essential in helping curtail the possibilities of non-compliance or loss to follow-up. The final limitation to the design is the lack of previous literature to inform us on a clinically meaningful effect size. With therapies such as CRISPR, it is quite unique from the rest of therapies as manufacturing costs are significantly high. Given how resource intensive CRISPR is, how will future trials take it into account costs when determining the clinically meaningful effect? Though the potential benefit of CRISPR-Cas9 therapy is endless, there are economical and ethical challenges we must tackle too.</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
