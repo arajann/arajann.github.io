@@ -30,3 +30,10 @@ Link: [The Link Air Pollutant Concentration to Lung Cancer](https://arajann.gith
 Software: RStudio
 
 
+## Impact of Healthcare Access and HIV testing on utilization of Cervical Cancer Screening
+
+Download: [Healthcare Access and HIV Testing on Cervical Cancer Screening](ar4173_jr4102 _final.pdf)
+
+Overview: A replication study that looks at the impact of healthcare access and HIV testing on utilization of cervical cancer screening among US women at high risk of HIV infection. The original study was a cross-sectional analysis that utilized 2016 BRFSS data. 
+
+Software: STATA

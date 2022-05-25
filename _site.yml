@@ -15,6 +15,8 @@ navbar:
       href: mailto:<anandrajan44@gmail.com>
     - icon: fa-github fa-lg
       href: http://github.com/arajann/
+    - icon: fa-linkedin fa-lg
+      href: www.linkedin.com/in/anand-rajan-73544522a
 output:
   html_document:
     theme: journal

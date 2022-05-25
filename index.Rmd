@@ -1,21 +1,16 @@
 ---
-title: "Anand Rajan's Personal Website"
+title: "Anand Rajan, MPH"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
+![](Portfolio Photo.jpg)
+
 ## Information
 
-Welcome to my personal homepage! I am an avid fan coding and doing analysis in R. Within this webpage you will be able to navigate to my CV, past and ongoing project. Below are links to my github account, professional networks, and my email. Enjoy!
-
-
-## Useful links
-
-
-[Github Account](https://github.com/arajann)
-[LinkedIn Account](https://www.linkedin.com/in/anand-rajan-73544522a/)
+Welcome to my personal homepage! I recently graduated from Columbia University Mailman School of Public Health with a MPH in Biostatistics and Data Science. I am looking to further build my foundations in statistical methods, data analytics, and design analysis in the realm of public health and clinical research. Within this webpage you will be able to navigate to my CV, completed studies, and ongoing projects. At the top right you can use the tabs to get to my github account, professional networks, and my email.
 
 
 ## Personal Information
@@ -24,6 +19,4 @@ Welcome to my personal homepage! I am an avid fan coding and doing analysis in R
 
 Email: anandrajan44@gmail.com
 
-
-
-![](https://digmodification.files.wordpress.com/2018/01/matrix-code-gif1.gif)
+Location: New York, New York

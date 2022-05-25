@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-## Resume/Curriculum Vitae
+## Curriculum Vitae
 
 
 ### EDUCATION	
@@ -31,9 +31,10 @@ Statistical Computing with SAS, Analysis of Categorical Data, Relational Databas
 
 - Designed and managed data analysis as the principal biostatistician for a retrospective cohort study for Dr. Michael Mangold, Department of Psychiatry 
 - Investigated the effect of drug use on the link between childhood trauma and later life cognition
-      - Pulled and cleaned cognition data from the MIDUS national study database and conducted exploratory analysis to understand the association between childhood trauma and adult cognition
-      - Conducted moderation analysis via regression analysis using linear/generalized mixed effect models in R
-      - Presented research at annual Columbia Biostatistics Department Symposium
+
+    - Pulled and cleaned cognition data from the MIDUS national study database and conducted exploratory analysis to understand the association between childhood trauma and adult cognition
+    - Conducted moderation analysis via regression analysis using linear/generalized mixed effect models in R
+    - Presented research at annual Columbia Biostatistics Department Symposium
 
 **Research Assistant**                                      
 **Division for Nephrology, Hypertension at UF Health** 
