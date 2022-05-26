@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-## Curriculum Vitae
+## Curriculum Vitae([click here to download](CV.pdf))
 
 
 ### EDUCATION	
@@ -22,7 +22,7 @@ Bachelor of Public Health(Class of 2020)
 - Graduated Cum Laude (with honors)
 
 **Relevant Coursework:** 
-Statistical Computing with SAS, Analysis of Categorical Data, Relational Databases and SQL programming, Regression Analysis, Data Science I&II, Probability, Decision Analysis, Analysis of Large Datasets, Statistical Inference, Intro to Randomized Controlled Trials, Applied Methods-Outcomes Research, Genetics, Biochemistry
+Statistical Computing with SAS, Analysis of Categorical Data, Relational Databases and SQL programming, Regression Analysis, Data Science I&II, Probability, Decision Analysis, Analysis of Large Datasets, Statistical Inference(Classical and Bayesian Estimation), Intro to Randomized Controlled Trials, Applied Methods-Outcomes Research, Genetics, Biochemistry, Applied Regression I&II
 
 ### RESEARCH			
 

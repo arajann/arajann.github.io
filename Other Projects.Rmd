@@ -11,7 +11,7 @@ output:
 
 Download Proposal: [A Phase III Superiority Trial Proposal of CRISPR-Cas9 Gene Editing Therapy vs Hydroxyurea for Sickle Cell Disease Patients](CRISPR-Cas9 Phase III RCT Proposal.pdf)
 
-Overview: Created a Phase III Randomized Control Trial Proposal where I designed a multicenter trial that answered the following clinical question.Among patients at least the age of 18 with sickle cell disease, is CRISPR-CAS-9 Therapy (single dose of CTX001 Infusion) superior to Hydroxyurea (15 milligram per kilogram of body weight) in reducing the frequency of Vaso-occlusive crises over the 2 years of individual follow-up? 
+Overview: I created a Phase III Randomized Control Trial Proposal where I designed a multicenter trial that answered the following clinical question: Among patients at least the age of 18 with sickle cell disease, is CRISPR-CAS-9 Therapy (single dose of CTX001 Infusion) superior to Hydroxyurea (15 milligram per kilogram of body weight) in reducing the frequency of Vaso-occlusive crises over the 2 years of individual follow-up? 
 
 
 ## Propensity Score Analysis 
